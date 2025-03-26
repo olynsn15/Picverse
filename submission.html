@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit your art!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/title_logo.png">
+</head>
+<body>
+    <nav class="navbar-container">
+        <div class="nav-inside">
+            <img src="./assets/picverse-logo.png" class="picverse-logo">
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./community.html">Community</a></li>
+                <li><a href="./submission.html" id="btn-submission" class="active">Submission</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="submission-header">
+            <img src="./assets/submission.jpg">
+            <div class="submission-text">
+                <h1>Submit your art here!</h1>
+                <p>Showcase your creativity to the world by submitting your artwork to Picverse! 
+                    Fill out the form below to upload your work and share it with the community.</p>
+            </div>
+        </div>
+        <div class="submission-container">
+            <div class="submission-form">
+                <div class="form-input" id="email">
+                    <div class="question-container">
+                        <p class="number">1</p>
+                        <p class="label">Email</p>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" class="input-box" placeholder="enter your email">
+                    </div>
+                </div>
+                <div class="form-input" id="title">
+                    <div class="question-container">
+                        <p class="number">2</p>
+                        <p class="label">Title</p>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" class="input-box" placeholder="your artwork title">
+                    </div>
+                </div>
+                <div class="form-input" id="description">
+                    <div class="question-container">
+                        <p class="number">3</p>
+                        <p class="label">Description</p>
+                    </div>
+                    <div class="input-container">
+                        <textarea class="input-box" placeholder="birefly describe your artwork"></textarea>
+                    </div>
+                </div>
+                <div class="form-input" id="tags">
+                    <div class="question-container">
+                        <p class="number">4</p>
+                        <p class="label">Tags</p>
+                    </div>
+                    <div class="input-container">
+                        <select class="input-box">
+                            <option value="" disabled selected>add relevant tags</option>
+                            <option value="technology">#PortraitPainting</option>
+                            <option value="education">#LandscapeArt</option>
+                            <option value="science">#Impressionism</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-input" id="file">
+                    <div class="question-container">
+                        <p class="number">5</p>
+                        <p class="label">Upload</p>
+                    </div>
+                    <div class="input-container">
+                        <label for="file-upload" class="upload-box">
+                            <input type="file" id="file-upload" class="input-box" hidden accept="image/*">
+                            <span class="buttons">Choose file</span>
+                            <p id="file-name" class="file-name">No file chosen</p>
+                            <img id="file-thumbnail" class="file-thumbnail" src="" alt="" hidden>
+                        </label>
+                    </div>
+                </div>                
+                <div class="form-input" id="AI-generated">
+                    <div class="question-container">
+                        <p class="number">6</p>
+                        <p class="label">Is this content AI generated?</p>
+                    </div>
+                    <div class="input-container">
+                        <label class="radio-label">
+                            <input type="radio" name="ai-generated" value="yes" class="radio-input">
+                            Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="ai-generated" value="no" class="radio-input">
+                            No
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <p>Submit</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-inside">
+                <img src="./assets/picverse-logo.png" class="picverse-logo-footer">
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <p><a>About Us</a></p>
+                    <p><a>Submission</a></p>
+                    <p><a>Gallery</a></p>
+                </div>
+                <div class="contact-us">
+                    <h3>Contact Us</h3>
+                    <p>Creative Street No. 28, Tower B, Jakarta, Indonesia 12950</p>
+                    <p>+62 21 5555 9999
+                        support@picverseid.com
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="footer-cpy">
+                <p>© Copyright 2025, All Rights Reserved by Picverse</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./scripts/submission.js"></script>
+</body>
+</html>
