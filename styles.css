@@ -958,18 +958,40 @@ hr{
 .submission-container{
     height: fit-content;
     background-color: #9FC4BD;
-    padding: 6rem 4rem;
+    padding: 4rem 4rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     align-items: center;
 }
 
+.alert{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background-color: transparent;
+    border: 3px solid #30645F;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.alert img{
+    width: 3rem;
+    height: 3rem;
+}
+
+.alert p{
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
 .submission-form{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.85rem;
 }
 
 .form-input{
@@ -1094,6 +1116,14 @@ textarea{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.error-message{
+    color: red;
+    font-size: 0.75em;
+    font-family: "Lexend Deca", sans-serif;
+    padding: 0.25rem;
+    margin-left: 3rem;
 }
 
 .buttons p{
