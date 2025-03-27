@@ -34,47 +34,58 @@
             </div>
         </div>
         <div class="submission-container">
+            <div class="alert">
+                <img src="./assets/icons/alert.png">
+                <p>
+                    Before submitting, please take a moment to carefully review your uploaded file and entered details.
+                </p>
+            </div>
             <div class="submission-form">
-                <div class="form-input" id="email">
+                <div class="form-input" id="email-container">
                     <div class="question-container">
                         <p class="number">1</p>
                         <p class="label">Email</p>
                     </div>
                     <div class="input-container">
-                        <input type="email" class="input-box" placeholder="enter your email">
+                        <input type="email" id="email-input" class="input-box" placeholder="Enter your email">
                     </div>
+                    <div class="error-message" id="email-error"></div>
                 </div>
-                <div class="form-input" id="title">
+                <div class="form-input" id="title-container">
                     <div class="question-container">
                         <p class="number">2</p>
                         <p class="label">Title</p>
                     </div>
                     <div class="input-container">
-                        <input type="text" class="input-box" placeholder="your artwork title">
+                        <input type="text" id="title-input" class="input-box" placeholder="Enter your artwork title">
                     </div>
+                    <div class="error-message" id="title-error"></div>
                 </div>
-                <div class="form-input" id="description">
+                <div class="form-input" id="description-container">
                     <div class="question-container">
                         <p class="number">3</p>
                         <p class="label">Description</p>
                     </div>
                     <div class="input-container">
-                        <textarea class="input-box" placeholder="birefly describe your artwork"></textarea>
+                        <textarea id="description-input" class="input-box" placeholder="Briefly describe your artwork"></textarea>
                     </div>
+                    <div class="error-message" id="description-error"></div>
                 </div>
-                <div class="form-input" id="tags">
+                <div class="form-input" id="tags-container">
                     <div class="question-container">
                         <p class="number">4</p>
                         <p class="label">Tags</p>
                     </div>
                     <div class="input-container">
-                        <select class="input-box">
-                            <option value="" disabled selected>add relevant tags</option>
-                            <option value="technology">#PortraitPainting</option>
-                            <option value="education">#LandscapeArt</option>
-                            <option value="science">#Impressionism</option>
+                        <select id="tags-input" class="input-box">
+                            <option>add relevant tags</option>
+                            <option></option>
+                            <option>#PortraitPainting</option>
+                            <option>#LandscapeArt</option>
+                            <option>#Impressionism</option>
                         </select>
                     </div>
+                    <div class="error-message" id="tags-error"></div>
                 </div>
                 <div class="form-input" id="file">
                     <div class="question-container">
@@ -82,14 +93,15 @@
                         <p class="label">Upload</p>
                     </div>
                     <div class="input-container">
-                        <label for="file-upload" class="upload-box">
+                        <label class="upload-box">
                             <input type="file" id="file-upload" class="input-box" hidden accept="image/*">
                             <span class="buttons">Choose file</span>
+                            <div class="error-message" id="file-error" style="display: none;"></div>
                             <p id="file-name" class="file-name">No file chosen</p>
                             <img id="file-thumbnail" class="file-thumbnail" src="" alt="" hidden>
                         </label>
                     </div>
-                </div>                
+                </div>                              
                 <div class="form-input" id="AI-generated">
                     <div class="question-container">
                         <p class="number">6</p>
@@ -105,9 +117,10 @@
                             No
                         </label>
                     </div>
+                    <div class="error-message" id="AI-radio-error"></div>
                 </div>
             </div>
-            <div class="buttons">
+            <div class="buttons" id="submit-button">
                 <p>Submit</p>
             </div>
         </div>
