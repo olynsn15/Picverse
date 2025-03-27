@@ -716,11 +716,15 @@ hr{
     display: flex;
     flex-direction: row;
     padding: 2rem 2rem;
-    gap: 1.5rem;
+    gap: 1rem;
+    overflow: hidden;
 }
 
-.activity-profile{
+.activity-profile, .active-users{
     width: 20%;
+}
+
+.activity-profile-content{
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -729,17 +733,17 @@ hr{
 
 .community-card{
     background-color: white;
-    border-radius: 20px;
+    border-radius: 15px;
 }
 
-.activity-container{
+.community-container{
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.activity-container h2{
+.community h2{
     font-family: "Space Grotesk", sans-serif;
     color: #30645F;
     font-size: 1.4em;
@@ -796,14 +800,127 @@ hr{
     text-align: start;
 }
 
-.forum{
+.forum {
     width: 60%;
-    background-color: white;
+    overflow-y: auto;
+    max-height: 100vh;
 }
 
-.active-users{
-    width: 20%;
+.forum-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.forum-item{
     background-color: white;
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.forum-header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forum-profile{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.forum-profile img{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.forum-header p{
+    font-size: 0.9em;
+}
+
+.forum-item h2{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.6em;
+    font-weight: 500;
+}
+
+.likes-comments{
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 2rem;
+}
+
+.likes, .comments{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.likes img, .comments img{
+    width: 1.15rem;
+    aspect-ratio: 1/1;
+}
+
+.likes p, .comments p{
+    font-size: 1em;
+}
+
+.active-users-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    height: 30rem;
+    overflow-y: auto;
+}
+
+.active-profile{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.active-profile img{
+    width: 20%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.active-username{
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.active-username h4{
+    font-family: "Lexend Deca", sans-serif;
+    color: #30645F;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.active-username p{
+    font-size: 0.7em;
 }
 
 /* SUBMISSION */
