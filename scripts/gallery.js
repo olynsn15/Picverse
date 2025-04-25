@@ -1,31 +1,71 @@
-function filterGallery(category) {
-    let items = document.querySelectorAll('.gallery-item');
-    let tags = document.querySelectorAll('.tags');
-    let galleryStatus = document.querySelector('.gallery-status');
+document.addEventListener("DOMContentLoaded", function () {
+    const items = document.querySelectorAll('.gallery-item');
+    const tags = document.querySelectorAll('.tags');
+    const galleryStatus = document.querySelector('.gallery-status');
 
-    let selectedTag = document.querySelector(`[onclick="filterGallery('${category}')"]`);
+    const filterButtons = document.querySelectorAll('[onclick^="filterGallery"]');
 
-    let tagName = selectedTag.textContent.trim();      
-    
-    let isActive = selectedTag.classList.contains('active');
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const category = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+            filterGallery(category, this);
+        });
+    });
 
-    tags.forEach(tag => tag.classList.remove('active'));
+    function filterGallery(category, selectedTag) {
+        let tagName = selectedTag.textContent.trim();      
+        let isActive = selectedTag.classList.contains('active');
 
-    if (isActive) {
-        items.forEach(item => item.style.display = 'flex');
-        galleryStatus.textContent = "Displaying all artworks";
-    } else {
-        selectedTag.classList.add('active');
-        let count = 0;
-        items.forEach(item => {
-            if (item.classList.contains(category)) {
-                item.style.display = 'flex';
-                count++;
-            } else {
-                item.style.display = 'none';
+        tags.forEach(tag => tag.classList.remove('active'));
+
+        if (isActive) {
+            items.forEach(item => item.style.display = 'flex');
+            galleryStatus.textContent = "Displaying all artworks";
+        } else {
+            selectedTag.classList.add('active');
+            let count = 0;
+            items.forEach(item => {
+                if (item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                    count++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            galleryStatus.textContent = `Displaying ${count} artworks for ${tagName}`; 
+        }
+    }
+
+    const portraits = document.querySelectorAll('.gallery-item.portrait');
+
+    portraits.forEach((portrait, index) => {
+        portrait.addEventListener("click", function () {
+            const modal = document.getElementById(`modal-portrait-${index + 1}`);
+            if (modal) {
+                modal.style.display = "flex";
             }
         });
+    });
 
-        galleryStatus.textContent = `Displaying ${count} artworks for ${tagName}`; 
-    }
-}
+    const closeButtons = document.querySelectorAll('.modal-close img');
+
+    closeButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const modal = this.closest('.modal');
+            if (modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    });
+
+});
