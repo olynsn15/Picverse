@@ -1,0 +1,246 @@
+.hero{
+    background-color: #30645F;
+    width: 100%;
+    height: fit-content;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    position: relative; 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.slider-image {
+    filter: blur(1px);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    object-fit: cover;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+.tagline {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding-bottom: 5rem;
+}
+
+.tagline h1{
+    color: white;
+    text-align: center;
+    max-width: 50rem;
+    font-size: 4em;
+    text-align: center;
+}
+
+.artwork-info{
+    position: absolute;
+    bottom: 8rem;
+    right: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 1.1rem;
+    font-family: "Lexend Deca", sans-serif;
+    opacity: 0;
+}
+
+.artwork-info p{
+    color: white;
+}
+
+.artwork-info.active{
+    opacity: 1;
+}
+
+.intro{
+    min-height: fit-content;
+    background-color: #9FC4BD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.intro-text{
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    padding: 8rem;
+    gap: 2rem;
+    color: #30645F;
+}
+
+.intro-text h1{
+    text-align: start;
+}
+
+
+#intro-p-1{
+    margin-bottom: 0.75rem;
+}
+
+#intro-img{
+    width: 40%;
+    height: 80vh;
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.trending-tags {
+    min-height: fit-content; 
+    background-color: #F4F0E5;
+    padding: 6rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trending-tags-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 60%;
+    padding: 4rem;
+    gap: 2.5rem;
+    color: #30645F;
+}
+
+.trending-tags-text p {
+    text-align: center;
+}
+
+.tags-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 100%;
+}
+
+.featured-artworks{
+    min-height: fit-content;
+    background-color: #9FC4BD;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.featured-artworks-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    color: #30645F;
+}
+
+.featured-artworks-text p {
+    text-align: center;
+}
+
+.fa-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.fa-card{
+    width: fit-content;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    gap: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 1;
+}
+
+.fa-card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; /* Stronger shadow */
+    cursor: pointer;
+}
+
+.fa-card img{
+    width: 14rem;
+    height: 14rem;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.fa-art-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    font-family: "Lexend Deca", sans-serif;
+    color: #30645F;
+}
+
+.fa-art-content .art-title {
+    font-weight: 500;
+    font-size: 1.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fa-art-content .art-artist {
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.art-likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.art-likes img {
+    width: 1rem;
+    height: 1rem;
+    object-fit: contain;
+    border-radius: 0px;
+}
+
+.art-likes p {
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,201 @@
+/* GALLERY */
+.gallery{
+    min-height: 100vh;
+    background-color: #F4F0E5;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 2rem 3.5rem;
+    gap: 1.5rem;
+}
+
+.gallery h1{
+    font-size: 2.25em;
+}
+
+.gallery-status{
+    color: #30645F;
+    font-size: 1.15em;
+}
+
+.gallery-tags-container{
+    display: flex;
+    gap: 0.75rem;
+    padding-bottom: 2rem;
+}
+
+.gallery-tags-container p{
+    font-size: 1.15em;
+}
+
+.gallery-status{
+    font-size: 1em;
+}
+
+.gallery-parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start; /* left-align all rows */
+    padding-bottom: 5rem;
+    max-width: 88rem;
+}
+
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+
+.gallery-item h2{
+    font-family: "Lexend Deca", sans-serif;
+    color: #30645F;
+    font-weight: 500;
+    font-size: 1.25em;
+}
+
+.gallery-item p{
+    color: #30645F;
+    font-size: 1em;
+}
+
+.gallery-item img{
+    width: 16rem;
+    height: 16rem;
+    object-fit: cover;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 110vh;
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.modal-content{
+    background-color: white;
+    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    width: 50%;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-bottom: 1rem;
+}
+
+.modal-close img{
+    width: 5%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+}
+
+.modal-body{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    width: 100%;
+}
+
+.modal-body img{
+    width: 45%;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.modal-text{
+    align-items: start;
+    justify-content: start;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: #30645F;
+    font-family: "Lexend Deca", sans-serif;
+    width: 42.5%;
+}
+
+.modal-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.modal-header{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-header h2{
+    font-size: 2.25em;
+    font-weight: 600;
+}
+
+.modal-header h3{
+    font-size: 1.25em;
+    font-weight: 500;
+}
+
+.modal-header .tags{
+    font-size: 0.75em;
+    font-weight: 400;
+    padding: 0.5rem 0.75rem;
+    border-radius: 15px;
+}
+
+.modal-desc p{
+    font-size: 0.85em;
+}
+
+.modal-like{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    width: 100%;
+}
+
+
+.modal-like-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    background-color: #c4613a;
+    gap: 0.5rem;
+    padding: 0.25rem;
+    border-radius: 25px;
+}
+
+.modal-like-content img{
+    width: 30%;
+}
+
+.modal-like-content p{
+    color: white;
+}

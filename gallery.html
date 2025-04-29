@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Artwork Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="./styles/configs.css">
+    <link rel="stylesheet" href="./styles/gallery.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./assets/title_logo.png">
+    <script src="./scripts/responsive.js"></script>
 </head>
 <body>
-    <nav class="navbar-container">
-        <div class="nav-inside">
+    <nav class="navbar">
+        <div class="nav-container">
             <img src="./assets/picverse-logo.png" class="picverse-logo">
             <ul class="nav-items">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="./gallery.html" class="active">Gallery</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
                 <li><a href="./about.html">About Us</a></li>
                 <li><a href="./community.html">Community</a></li>
-                <li><a href="./submission.html" id="btn-submission">Submission</a></li>
+                <li><a href="./submission.html" id="btn-submission" class="active">Submission</a></li>
             </ul>
         </div>
     </nav>
+
+    <div class="navbar-responsive">
+        <div class="nav-container-responsive">
+            <img src="./assets/icons/hamburger.png" class="hamburger-menu" id="hamburger-icon">
+            <img src="./assets/picverse-logo.png" class="picverse-logo-responsive">
+        </div>
+    </div>
+
+    <div class="nav-responsive-menu">
+        <ul class="nav-items-responsive" id="responsive-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./community.html">Community</a></li>
+            <li><a href="./submission.html">Submission</a></li>
+        </ul>
+    </div>
 
     <main>
         <div class="gallery">
@@ -33,132 +56,134 @@
                 <p class="tags" onclick="filterGallery('impressionism')">#Impressionism</p>
             </div>
             <p class="gallery-status">Displaying all artworks</p>
-            <div class="gallery-container">
-                <!-- PORTRAIT PAINTINGS -->
-                <div class="gallery-item portrait">
-                    <img src="./assets/gallery/portrait-1.jpg" alt="portrait 1">
-                    <h2>Bindo Altoviti</h2>
-                    <p>Raphael</p>
-                </div>
-                <div class="gallery-item portrait">
-                    <img src="./assets/gallery/portrait-2.jpg" alt="portrait 2">
-                    <h2>Lucretia</h2>
-                    <p>Rembrandt van Rijn</p>
-                </div>
-                <div class="gallery-item portrait">
-                    <img src="./assets/gallery/portrait-3.jpg" alt="portrait 3">
-                    <h2>Madame Bergeret</h2>
-                    <p>François Boucher</p>
-                </div>
-                <div class="gallery-item portrait">
-                    <img src="./assets/gallery/portrait-4.jpg" alt="portrait 4">
-                    <h2>Dr. John Bard</h2>
-                    <p>James Sharples</p>
-                </div>
-                <div class="gallery-item portrait">
-                    <img src="./assets/gallery/portrait-5.jpg" alt="portrait 5">
-                    <h2>Mrs. George Mills</h2>
-                    <p>John Downman</p>
-                </div>
-
-
-                <!-- LANDSCAPE PAINTINGS -->
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-1.jpg" alt="landscape 1">
-                    <h2>View of Lake Nemi</h2>
-                    <p>Jules Coignet</p>
-                </div>
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-2.jpg" alt="landscape 2">
-                    <h2>Beach Scene</h2>
-                    <p>Eugène Boudin</p>
-                </div>
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-3.jpg" alt="landscape 3">
-                    <h2>October</h2>
-                    <p>William Trost Richards</p>
-                </div>
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-4.jpg" alt="landscape 4">
-                    <h2>A Landscape after Sunset</h2>
-                    <p>Washington Allston</p>
-                </div>
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-5.jpg" alt="landscape 5">
-                    <h2>Picking Flowers</h2>
-                    <p>Auguste Renoir</p>
-                </div>
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-6.jpg" alt="landscape 6">
-                    <h2>The Willows</h2>
-                    <p>Claude Monet</p>
-                </div>
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-7.jpg" alt="landscape 7">
-                    <h2>The Junction of Thames</h2>
-                    <p>Joseph Mallord William Turner</p>
-                </div>
-                <div class="gallery-item landscape">
-                    <img src="./assets/gallery/landscape-8.jpg" alt="landscape 8">
-                    <h2>The Starry Night</h2>
-                    <p>Vincent Van Gogh</p>
-                </div>
-
-
-                <!-- IMPRESSIONISM PAINTINGS -->
-                <div class="gallery-item impressionism">
-                    <img src="./assets/gallery/impressionism-1.jpg" alt="impressionism 1">
-                    <h2>Woman with a Parasol</h2>
-                    <p>Claude Monet</p>
-                </div>
-                <div class="gallery-item impressionism">
-                    <img src="./assets/gallery/impressionism-2.jpg" alt="impressionism 2">
-                    <h2>The Boating Party</h2>
-                    <p>Mary Cassatt</p>
-                </div>
-                <div class="gallery-item impressionism">
-                    <img src="./assets/gallery/impressionism-3.jpg" alt="impressionism 3">
-                    <h2>La Grenouillère </h2>
-                    <p>Claude Monet</p>
-                </div>
-                <div class="gallery-item impressionism">
-                    <img src="./assets/gallery/impressionism-4.jpg" alt="impressionism 4">
-                    <h2>The Parisian Life</h2>
-                    <p>Juan Luna</p>
-                </div>
-                <div class="gallery-item impressionism">
-                    <img src="./assets/gallery/impressionism-5.jpg" alt="impressionism 5">
-                    <h2>The Dancing Class</h2>
-                    <p>Edgar Degas</p>
+            <div class="gallery-parent">
+                <div class="gallery-container">
+                    <!-- PORTRAIT PAINTINGS -->
+                    <div class="gallery-item portrait">
+                        <img src="./assets/gallery/portrait-1.jpg" alt="portrait 1">
+                        <h2>Bindo Altoviti</h2>
+                        <p>Raphael</p>
+                    </div>
+                    <div class="gallery-item portrait">
+                        <img src="./assets/gallery/portrait-2.jpg" alt="portrait 2">
+                        <h2>Lucretia</h2>
+                        <p>Rembrandt van Rijn</p>
+                    </div>
+                    <div class="gallery-item portrait">
+                        <img src="./assets/gallery/portrait-3.jpg" alt="portrait 3">
+                        <h2>Madame Bergeret</h2>
+                        <p>François Boucher</p>
+                    </div>
+                    <div class="gallery-item portrait">
+                        <img src="./assets/gallery/portrait-4.jpg" alt="portrait 4">
+                        <h2>Dr. John Bard</h2>
+                        <p>James Sharples</p>
+                    </div>
+                    <div class="gallery-item portrait">
+                        <img src="./assets/gallery/portrait-5.jpg" alt="portrait 5">
+                        <h2>Mrs. George Mills</h2>
+                        <p>John Downman</p>
+                    </div>
+    
+    
+                    <!-- LANDSCAPE PAINTINGS -->
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-1.jpg" alt="landscape 1">
+                        <h2>View of Lake Nemi</h2>
+                        <p>Jules Coignet</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-2.jpg" alt="landscape 2">
+                        <h2>Beach Scene</h2>
+                        <p>Eugène Boudin</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-3.jpg" alt="landscape 3">
+                        <h2>October</h2>
+                        <p>William Trost Richards</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-4.jpg" alt="landscape 4">
+                        <h2>A Landscape after Sunset</h2>
+                        <p>Washington Allston</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-5.jpg" alt="landscape 5">
+                        <h2>Picking Flowers</h2>
+                        <p>Auguste Renoir</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-6.jpg" alt="landscape 6">
+                        <h2>The Willows</h2>
+                        <p>Claude Monet</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-7.jpg" alt="landscape 7">
+                        <h2>The Junction of Thames</h2>
+                        <p>Joseph Mallord William Turner</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-8.jpg" alt="landscape 8">
+                        <h2>The Starry Night</h2>
+                        <p>Vincent Van Gogh</p>
+                    </div>
+    
+    
+                    <!-- IMPRESSIONISM PAINTINGS -->
+                    <div class="gallery-item impressionism">
+                        <img src="./assets/gallery/impressionism-1.jpg" alt="impressionism 1">
+                        <h2>Woman with a Parasol</h2>
+                        <p>Claude Monet</p>
+                    </div>
+                    <div class="gallery-item impressionism">
+                        <img src="./assets/gallery/impressionism-2.jpg" alt="impressionism 2">
+                        <h2>The Boating Party</h2>
+                        <p>Mary Cassatt</p>
+                    </div>
+                    <div class="gallery-item impressionism">
+                        <img src="./assets/gallery/impressionism-3.jpg" alt="impressionism 3">
+                        <h2>La Grenouillère </h2>
+                        <p>Claude Monet</p>
+                    </div>
+                    <div class="gallery-item impressionism">
+                        <img src="./assets/gallery/impressionism-4.jpg" alt="impressionism 4">
+                        <h2>The Parisian Life</h2>
+                        <p>Juan Luna</p>
+                    </div>
+                    <div class="gallery-item impressionism">
+                        <img src="./assets/gallery/impressionism-5.jpg" alt="impressionism 5">
+                        <h2>The Dancing Class</h2>
+                        <p>Edgar Degas</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- MODALS -->
-        <div class="modal" id="modal-portrait-1">
-            <div class="modal-content">
-                <div class="modal-close"><img src="./assets/icons/X.png"></div>
-                <div class="modal-body">
-                    <img src="./assets/gallery/portrait-1.jpg">
-                    <div class="modal-text">
-                        <div class="modal-info">
-                            <div class="modal-header"> 
-                                <h2>Bindo Altoviti</h2>
-                                <h3>Rafael</h3>
-                                <h4 class="tags">#PortraitPainting</h4>
+    
+            <!-- MODALS -->
+            <div class="modal" id="modal-portrait-1">
+                <div class="modal-content">
+                    <div class="modal-close"><img src="./assets/icons/X.png"></div>
+                    <div class="modal-body">
+                        <img src="./assets/gallery/portrait-1.jpg">
+                        <div class="modal-text">
+                            <div class="modal-info">
+                                <div class="modal-header"> 
+                                    <h2>Bindo Altoviti</h2>
+                                    <h3>Rafael</h3>
+                                    <h4 class="tags">#PortraitPainting</h4>
+                                </div>
+                                <div class="modal-desc">
+                                    <p>
+                                        A young man with smooth, pale peachy skin and long blond hair looks over his right shoulder 
+                                        at us in this vertical portrait painting. He has light green eyes, a straight nose, full 
+                                        pink lips, and a narrow chin.
+                                    </p>
+                                </div>
                             </div>
-                            <div class="modal-desc">
-                                <p>
-                                    A young man with smooth, pale peachy skin and long blond hair looks over his right shoulder 
-                                    at us in this vertical portrait painting. He has light green eyes, a straight nose, full 
-                                    pink lips, and a narrow chin.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="modal-like">
-                            <div class="modal-like-content">
-                                <img src="./assets/icons/likes_modal.png">
-                                <p>980</p>
+                            <div class="modal-like">
+                                <div class="modal-like-content">
+                                    <img src="./assets/icons/likes_modal.png">
+                                    <p>980</p>
+                                </div>
                             </div>
                         </div>
                     </div>

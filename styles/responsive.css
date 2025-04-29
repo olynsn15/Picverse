@@ -1,0 +1,190 @@
+@media screen and (min-width: 801px) {
+    .navbar-responsive,
+    .nav-responsive-menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        display: none;
+    }
+
+    .navbar-responsive {
+        background-color: #30645F;
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .hamburger-menu {
+        height: 30px;
+    }
+
+    .picverse-logo-responsive {
+        height: 40px;
+    }
+
+    .nav-container-responsive {
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 1.25rem;
+    }
+
+    .nav-responsive-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: #30645F;
+        border-top: 1px solid #9FC4BD;
+    }
+
+    .nav-responsive-menu.show {
+        max-height: 1000px; 
+        opacity: 1;
+    }
+
+    .nav-items-responsive {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem 1rem;
+        margin: 0;
+    }
+
+    .nav-items-responsive a {
+        font-family: "Lexend Deca", sans-serif;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 1rem;
+        color: white;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s;
+    }
+
+    .nav-items-responsive a:hover {
+        color: #9FC4BD;
+    }
+
+    .tagline h1{
+        max-width: 40rem;
+    }
+
+    /* HOME */
+    .intro{
+        flex-direction: column;
+        padding: 6rem 0rem;
+        gap: 4rem;
+    }
+
+    #intro-img{
+        width: 80%;
+        height: 40vh;
+        border-radius: 20px;
+    }
+
+    .intro-text{
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
+        padding: 1.5rem;
+        gap: 2rem;
+        color: #30645F;
+    }
+
+    .trending-tags-text {
+        padding: 2rem;
+        max-width: 75%;
+        flex-shrink: 1;
+    }
+
+    .featured-artworks-text {
+        max-width: 80%;
+    }
+
+    .fa-container {
+        display: flex;
+        flex-direction: row-;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+
+    /* ABOUT US */
+    .about-picverse{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 4rem 2rem;
+        gap: 4rem;
+    }
+
+    .about-picverse-text{
+        max-width: 90%;
+        align-items: center;
+    }
+
+    .about-picverse-text h1 {
+        text-align: center;
+    }
+
+    .about-slider-container { 
+        width:30rem;
+        height: 40rem;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .vision-mission h1{
+        max-width: 80%;
+    }
+    
+    .vision-mission p {
+        max-width: 80%;
+    }
+
+    .vision-mission-container p{
+        max-width: 100%;
+    }
+
+    .vision-mission-container{
+        flex-direction: column;
+    }
+
+    .key-features p{
+        max-width: 80%;
+    }
+
+    .key-features-container{
+        flex-direction: column;
+        max-width: 70%;
+    }
+
+    .key-features-container p{
+        max-width: 100%;
+    }
+    
+    /* COMMUNITY */
+    .community{
+        flex-direction: column;
+    }
+
+    .activity-profile, .active-users, .forum{
+        width: 100%;
+    }
+
+    .forum {
+        max-height: fit-content;
+    }
+}

@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About Picverse</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="./styles/configs.css">
+    <link rel="stylesheet" href="./styles/about_us.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="./assets/title_logo.png">
+    <script src="./scripts/responsive.js"></script>
 </head>
 <body>
-    <nav class="navbar-container">
-        <div class="nav-inside">
+    <nav class="navbar">
+        <div class="nav-container">
             <img src="./assets/picverse-logo.png" class="picverse-logo">
             <ul class="nav-items">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="./about.html" class="active">About Us</a></li>
+                <li><a href="./about.html">About Us</a></li>
                 <li><a href="./community.html">Community</a></li>
-                <li><a href="./submission.html" id="btn-submission">Submission</a></li>
+                <li><a href="./submission.html" id="btn-submission" class="active">Submission</a></li>
             </ul>
         </div>
     </nav>
+
+    <div class="navbar-responsive">
+        <div class="nav-container-responsive">
+            <img src="./assets/icons/hamburger.png" class="hamburger-menu" id="hamburger-icon">
+            <img src="./assets/picverse-logo.png" class="picverse-logo-responsive">
+        </div>
+    </div>
+
+    <div class="nav-responsive-menu">
+        <ul class="nav-items-responsive" id="responsive-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./about.html">About Us</a></li>
+            <li><a href="./community.html">Community</a></li>
+            <li><a href="./submission.html">Submission</a></li>
+        </ul>
+    </div>
 
     <main>
         <div class="about-picverse">
