@@ -13,6 +13,10 @@ body{
     height: fit-content;
 }
 
+::-webkit-scrollbar{
+    display: none;
+}
+
 /* NAVIGATION BAR */
 .navbar{
     background-color: #30645F;

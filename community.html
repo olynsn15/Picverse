@@ -24,8 +24,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
                 <li><a href="./about.html">About Us</a></li>
-                <li><a href="./community.html">Community</a></li>
-                <li><a href="./submission.html" id="btn-submission" class="active">Submission</a></li>
+                <li><a href="./community.html" class="active">Community</a></li>
+                <li><a href="./submission.html" id="btn-submission">Submission</a></li>
             </ul>
         </div>
     </nav>
@@ -34,6 +34,9 @@
         <div class="nav-container-responsive">
             <img src="./assets/icons/hamburger.png" class="hamburger-menu" id="hamburger-icon">
             <img src="./assets/picverse-logo.png" class="picverse-logo-responsive">
+        </div>
+        <div class="responsive-pfp">
+            <img src="./assets/PFP/13.jpg">
         </div>
     </div>
 
@@ -52,35 +55,90 @@
             <div class="activity-profile">
                 <div class="activity-profile-content">
                     <div class="community-card" id="profile">
-                        <div class="community-container">
-                            <h2>Profile</h2>
+                        <div class="community-container" id="profile-container">
                             <div class="profile">
                                 <img src="./assets/PFP/13.jpg">
                                 <div class="username">
                                     <h4>@kirbyyoghurt</h4>
                                     <p>Lovely Artist</p>
                                 </div>
+                                <p class="buttons">Edit Profile</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="community-card">
-                        <div class="community-container" id="activity">
-                            <h2>Recent Activity</h2>
-                            <div class="activity-item">
-                                <img src="./assets/PFP/9.jpg">
-                                <p>@boba_brush_9 commented on "Watercolor vs. Digital – Which is harder?</p>
-                            </div>
-                            <div class="activity-item">
-                                <img src="./assets/PFP/2.jpg">
-                                <p>@sleepycanvas_210 started a new forum: "Is AI art real art? Let's discuss!"</p>
-                            </div>
-                            <div class="activity-item">
-                                <img src="./assets/PFP/10.jpg">
-                                <p>@LofiDoodle gained 50 new followers!</p>
-                            </div>
-                            <div class="activity-item">
-                                <img src="./assets/PFP/8.jpg">
-                                <p>@pixelpickle liked 15 artworks in the past hour!</p>
+                        <hr>
+                        <div class="community-container" id="active-users-container">
+                            <h2>Active Friends</h2>
+                            <div class="active-users-container">
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/11.jpg">
+                                    <div class="active-username">
+                                        <h4>@chaoticbrush</h4>
+                                        <p>Chaotic Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/2.jpg">
+                                    <div class="active-username">
+                                        <h4>@sleepycanvas2</h4>
+                                        <p>Sleepy Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/1.jpg">
+                                    <div class="active-username">
+                                        <h4>@indomie.doodz</h4>
+                                        <p>Doodler Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/8.jpg">
+                                    <div class="active-username">
+                                        <h4>@pixelpickle</h4>
+                                        <p>Digital Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/12.jpg">
+                                    <div class="active-username">
+                                        <h4>@abtrcttbanana</h4>
+                                        <p>Abstract Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/5.jpg">
+                                    <div class="active-username">
+                                        <h4>@tofu_illust11</h4>
+                                        <p>Smooth Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/3.jpg">
+                                    <div class="active-username">
+                                        <h4>@oopalayer</h4>
+                                        <p>Digital Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/7.jpg">
+                                    <div class="active-username">
+                                        <h4>@grayscalez_</h4>
+                                        <p>Monochromatic Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/4.jpg">
+                                    <div class="active-username">
+                                        <h4>@wacomwarr34</h4>
+                                        <p>Digital Artist</p>
+                                    </div>
+                                </div>
+                                <div class="active-profile">
+                                    <img src="./assets/PFP/6.jpg">
+                                    <div class="active-username">
+                                        <h4>@beanstrk_0</h4>
+                                        <p>Doodles Artist</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -88,6 +146,11 @@
             </div>
             <div class="forum">
                 <div class="forum-container">
+                    <div class="post-forum">
+                        <img src="./assets/PFP/13.jpg" class="post-forum-pfp">
+                        <input type="text" id="title-input" class="post-forum-input" placeholder="Share your thoughts...">
+                        <p class="buttons">Post</p>
+                    </div>
                     <div class="forum-item">
                         <div class="forum-header">
                             <div class="forum-profile">
@@ -96,7 +159,12 @@
                             </div>
                             <p>28 February</p>
                         </div>
-                        <h2>Is AI art real art? Let's discuss!</h2>
+                        <div class="forum-text">
+                            <h2>Is AI art real art? Let's discuss!</h2>
+                            <p>Is AI art real art? Let’s discuss how machine-generated creativity 
+                                challenges our traditional understanding of authorship, expression, and what it truly means to create.
+                            </p>
+                        </div>
                         <div class="likes-comments">
                             <div class="likes">
                                 <img src="./assets/icons/likes.png">
@@ -116,7 +184,14 @@
                             </div>
                             <p>25 February</p>
                         </div>
-                        <h2>Tips for Growing an Art Page</h2>
+                        <div class="forum-text">
+                            <h2>Tips for growing an art page</h2>
+                            <p>Let’s share proven strategies, creative content ideas, and personal experiences 
+                                on how to build a loyal and engaged community, boost visibility across social 
+                                media platforms, and turn your art page into a thriving space that reflects your 
+                                unique artistic voice and attracts genuine followers.
+                            </p>
+                        </div>
                         <div class="likes-comments">
                             <div class="likes">
                                 <img src="./assets/icons/likes.png">
@@ -136,7 +211,13 @@
                             </div>
                             <p>18 February</p>
                         </div>
-                        <h2>Best Music to Paint Dramatic Masterpieces To</h2>
+                        <div class="forum-text">
+                            <h2>Best music to paint dramatic masterpieces to</h2>
+                            <p>Let’s explore powerful soundtracks, intense instrumentals, and emotionally charged music 
+                                that can ignite your imagination, heighten your focus, and set the perfect mood for creating 
+                                bold and dramatic works of art.
+                            </p>
+                        </div>
                         <div class="likes-comments">
                             <div class="likes">
                                 <img src="./assets/icons/likes.png">
@@ -156,7 +237,12 @@
                             </div>
                             <p>13 February</p>
                         </div>
-                        <h2>I Painted at 3AM and Now I Fear It’s Cursed</h2>
+                        <div class="forum-text">
+                            <h2>I Painted at 3AM and Now I Fear It’s Cursed</h2>
+                            <p>It started as a burst of midnight inspiration—just me, my brushes, and 
+                                questionable life choices—but now every time I look at the painting, I swear it’s staring back…
+                            </p>
+                        </div>
                         <div class="likes-comments">
                             <div class="likes">
                                 <img src="./assets/icons/likes.png">
@@ -176,7 +262,12 @@
                             </div>
                             <p>29 January</p>
                         </div>
-                        <h2>HELP! My Watercolors Look Like a Smoothie</h2>
+                        <div class="forum-text">
+                            <h2>HELP! My Watercolors Look Like a Smoothie</h2>
+                            <p>I sat down to paint a peaceful sunset, but somewhere between 'wet on wet' and 'too much water,' 
+                                I ended up with a swirling fruit explosion—now my paper smells like regret and mango.
+                            </p>
+                        </div>
                         <div class="likes-comments">
                             <div class="likes">
                                 <img src="./assets/icons/likes.png">
@@ -196,7 +287,13 @@
                             </div>
                             <p>25 January</p>
                         </div>
-                        <h2>Why Does My Cat Judge My Paintings?</h2>
+                        <div class="forum-text">
+                            <h2>Why Does My Cat Judge My Paintings?</h2>
+                            <p>Every time I proudly finish a piece, my cat stares at it like I’ve committed a crime against 
+                                art—and honestly, the silent judgment is louder than any critique I've ever gotten. I swear 
+                                if she had thumbs, she'd be writing scathing reviews instead of knocking over my paint water.
+                            </p>
+                        </div>
                         <div class="likes-comments">
                             <div class="likes">
                                 <img src="./assets/icons/likes.png">
@@ -208,83 +305,28 @@
                             </div>
                         </div>
                     </div>
+                    <h2 id="view-all">View all forums ></h2>
                 </div>
             </div>
-            <div class="active-users">
+            <div class="recent-activity">
                 <div class="community-card">
-                    <div class="community-container">
-                        <h2>Active Users</h2>
-                        <div class="active-users-container">
-                            <div class="active-profile">
-                                <img src="./assets/PFP/11.jpg">
-                                <div class="active-username">
-                                    <h4>@chaoticbrush</h4>
-                                    <p>Chaotic Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/2.jpg">
-                                <div class="active-username">
-                                    <h4>@sleepycanvas_210</h4>
-                                    <p>Sleepy Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/1.jpg">
-                                <div class="active-username">
-                                    <h4>@indomie.doodler</h4>
-                                    <p>Doodler Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/8.jpg">
-                                <div class="active-username">
-                                    <h4>@pixelpickle</h4>
-                                    <p>Digital Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/12.jpg">
-                                <div class="active-username">
-                                    <h4>@abstracttbananaa</h4>
-                                    <p>Abstract Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/5.jpg">
-                                <div class="active-username">
-                                    <h4>@tofu_illustrates11</h4>
-                                    <p>Smooth Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/3.jpg">
-                                <div class="active-username">
-                                    <h4>@oopsalllayers</h4>
-                                    <p>Digital Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/7.jpg">
-                                <div class="active-username">
-                                    <h4>@grayscaleonly_</h4>
-                                    <p>Monochromatic Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/4.jpg">
-                                <div class="active-username">
-                                    <h4>@wacomwarrior34</h4>
-                                    <p>Digital Artist</p>
-                                </div>
-                            </div>
-                            <div class="active-profile">
-                                <img src="./assets/PFP/6.jpg">
-                                <div class="active-username">
-                                    <h4>@beanstroker_0_0</h4>
-                                    <p>Doodles Artist</p>
-                                </div>
-                            </div>
+                    <div class="community-container" id="recent-activity-container">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-item">
+                            <img src="./assets/PFP/9.jpg">
+                            <p>@boba_brush_9 commented on "Watercolor vs. Digital – Which is harder?</p>
+                        </div>
+                        <div class="activity-item">
+                            <img src="./assets/PFP/2.jpg">
+                            <p>@sleepycanvas_210 started a new forum: "Is AI art real art? Let's discuss!"</p>
+                        </div>
+                        <div class="activity-item">
+                            <img src="./assets/PFP/10.jpg">
+                            <p>@LofiDoodle gained 50 new followers!</p>
+                        </div>
+                        <div class="activity-item">
+                            <img src="./assets/PFP/8.jpg">
+                            <p>@pixelpickle liked 15 artworks in the past hour!</p>
                         </div>
                     </div>
                 </div>
