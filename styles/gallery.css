@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    padding: 2rem 3.5rem;
+    padding: 3rem 3.5rem;
     gap: 1.5rem;
 }
 
@@ -36,6 +36,7 @@
 .gallery-parent{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -44,9 +45,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: flex-start; /* left-align all rows */
+    justify-content: center; /* left-align all rows */
     padding-bottom: 5rem;
-    max-width: 88rem;
 }
 
 .gallery-item {
@@ -75,8 +75,11 @@
     height: 16rem;
     object-fit: cover;
     border-radius: 25px;
-    cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.200) 0px 4px 8px;
+}
+
+.portrait img, .portrait h2, .portrait p{
+    cursor: pointer;
 }
 
 .modal{
@@ -97,6 +100,7 @@
     background-color: white;
     border-radius: 20px;
     padding: 1.5rem 2rem;
+    margin-bottom: 0.5rem;
     width: 50%;
     position: relative;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);

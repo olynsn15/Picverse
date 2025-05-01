@@ -51,35 +51,36 @@
         <div class="gallery">
             <h1>Tags</h1>
             <div class="gallery-tags-container">
-                <p class="tags" onclick="filterGallery('portrait')">#PortraitPainting</p>
-                <p class="tags" onclick="filterGallery('landscape')">#LandscapeArt</p>
-                <p class="tags" onclick="filterGallery('impressionism')">#Impressionism</p>
-            </div>
+                <p class="tags" data-category="portrait">#PortraitPainting</p>
+                <p class="tags" data-category="landscape">#LandscapeArt</p>
+                <p class="tags" data-category="impressionism">#Impressionism</p>
+                <p class="tags" data-category="abstract">#AbstractArt</p>
+            </div>            
             <p class="gallery-status">Displaying all artworks</p>
             <div class="gallery-parent">
                 <div class="gallery-container">
                     <!-- PORTRAIT PAINTINGS -->
-                    <div class="gallery-item portrait">
+                    <div class="gallery-item portrait" data-modal-id="modal-portrait-1">
                         <img src="./assets/gallery/portrait-1.jpg" alt="portrait 1">
                         <h2>Bindo Altoviti</h2>
                         <p>Raphael</p>
                     </div>
-                    <div class="gallery-item portrait">
+                    <div class="gallery-item portrait" data-modal-id="modal-portrait-2">
                         <img src="./assets/gallery/portrait-2.jpg" alt="portrait 2">
                         <h2>Lucretia</h2>
                         <p>Rembrandt van Rijn</p>
                     </div>
-                    <div class="gallery-item portrait">
+                    <div class="gallery-item portrait" data-modal-id="modal-portrait-3">
                         <img src="./assets/gallery/portrait-3.jpg" alt="portrait 3">
                         <h2>Madame Bergeret</h2>
                         <p>François Boucher</p>
                     </div>
-                    <div class="gallery-item portrait">
+                    <div class="gallery-item portrait" data-modal-id="modal-portrait-4">
                         <img src="./assets/gallery/portrait-4.jpg" alt="portrait 4">
                         <h2>Dr. John Bard</h2>
                         <p>James Sharples</p>
                     </div>
-                    <div class="gallery-item portrait">
+                    <div class="gallery-item portrait" data-modal-id="modal-portrait-5">
                         <img src="./assets/gallery/portrait-5.jpg" alt="portrait 5">
                         <h2>Mrs. George Mills</h2>
                         <p>John Downman</p>
@@ -127,6 +128,16 @@
                         <h2>The Starry Night</h2>
                         <p>Vincent Van Gogh</p>
                     </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-9.jpg" alt="landscape 9">
+                        <h2>Winter Landscape</h2>
+                        <p>Jan Van Goyen</p>
+                    </div>
+                    <div class="gallery-item landscape">
+                        <img src="./assets/gallery/landscape-10.jpg" alt="landscape 9">
+                        <h2>Sunrise</h2>
+                        <p>Claude Monet</p>
+                    </div>
     
     
                     <!-- IMPRESSIONISM PAINTINGS -->
@@ -155,42 +166,93 @@
                         <h2>The Dancing Class</h2>
                         <p>Edgar Degas</p>
                     </div>
+
+                    <!-- ABSTRACT PAINTINGS -->
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-1.jpg" alt="abstract 1">
+                        <h2>Feke</h2>
+                        <p>Tomma Abts</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-2.jpg" alt="abstract 2">
+                        <h2>Desert Sun</h2>
+                        <p>Odili Donald</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-3.jpg" alt="abstract 3">
+                        <h2>Composition 8</h2>
+                        <p>Wassily Kandinsky</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-4.jpg" alt="abstract 4">
+                        <h2>Vibes for You</h2>
+                        <p>Minicrisp AI</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-5.jpg" alt="abstract 5">
+                        <h2>Broadway Boogie</h2>
+                        <p>Piet Mondrian</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-6.jpg" alt="abstract 6">
+                        <h2>Multiverse</h2>
+                        <p>Glitter Rainbow</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-7.jpg" alt="abstract 7">
+                        <h2>Mountains of Fog</h2>
+                        <p>Midjourney</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-8.jpg" alt="abstract 8">
+                        <h2>Binari Exp2</h2>
+                        <p>Alfio Giuffrida</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-9.jpg" alt="abstract 9">
+                        <h2>Stillleben</h2>
+                        <p>Alexej von Jawlensky</p>
+                    </div>
+                    <div class="gallery-item abstract">
+                        <img src="./assets/gallery/abstract-10.jpg" alt="abstract 10">
+                        <h2>Eierschläger</h2>
+                        <p>Kurt Schwitters</p>
+                    </div>
                 </div>
             </div>
-    
-            <!-- MODALS -->
-            <div class="modal" id="modal-portrait-1">
-                <div class="modal-content">
-                    <div class="modal-close"><img src="./assets/icons/X.png"></div>
-                    <div class="modal-body">
-                        <img src="./assets/gallery/portrait-1.jpg">
-                        <div class="modal-text">
-                            <div class="modal-info">
-                                <div class="modal-header"> 
-                                    <h2>Bindo Altoviti</h2>
-                                    <h3>Rafael</h3>
-                                    <h4 class="tags">#PortraitPainting</h4>
-                                </div>
-                                <div class="modal-desc">
-                                    <p>
-                                        A young man with smooth, pale peachy skin and long blond hair looks over his right shoulder 
-                                        at us in this vertical portrait painting. He has light green eyes, a straight nose, full 
-                                        pink lips, and a narrow chin.
-                                    </p>
-                                </div>
+        </div>
+        
+        <!-- MODALS -->
+        <div class="modal" id="modal-portrait-1">
+            <div class="modal-content">
+                <div class="modal-close"><img src="./assets/icons/X.png"></div>
+                <div class="modal-body">
+                    <img src="./assets/gallery/portrait-1.jpg">
+                    <div class="modal-text">
+                        <div class="modal-info">
+                            <div class="modal-header"> 
+                                <h2>Bindo Altoviti</h2>
+                                <h3>Rafael</h3>
+                                <h4 class="tags">#PortraitPainting</h4>
                             </div>
-                            <div class="modal-like">
-                                <div class="modal-like-content">
-                                    <img src="./assets/icons/likes_modal.png">
-                                    <p>980</p>
-                                </div>
+                            <div class="modal-desc">
+                                <p>
+                                    A young man with smooth, pale peachy skin and long blond hair looks over his right shoulder 
+                                    at us in this vertical portrait painting. He has light green eyes, a straight nose, full 
+                                    pink lips, and a narrow chin.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-like">
+                            <div class="modal-like-content">
+                                <img src="./assets/icons/likes_modal.png">
+                                <p>980</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="modal" id="modal-portrait-2">
             <div class="modal-content">
                 <div class="modal-close"><img src="./assets/icons/X.png"></div>
@@ -326,20 +388,49 @@
                 <img src="./assets/picverse-logo.png" class="picverse-logo-footer">
                 <div class="quick-links">
                     <h3>Quick Links</h3>
-                    <p><a>About Us</a></p>
-                    <p><a>Submission</a></p>
-                    <p><a>Gallery</a></p>
+                    <p><a href="./about.html">About Us</a></p>
+                    <p><a href="./submission.html">Submission</a></p>
+                    <p><a href="./gallery.html">Gallery</a></p>
                 </div>
                 <div class="contact-us">
                     <h3>Contact Us</h3>
                     <p>Creative Street No. 28, Tower B, Jakarta, Indonesia 12950</p>
-                    <p>+62 21 5555 9999
-                        support@picverseid.com
-                    </p>
+                    <p>support@picverseid.com</p>
                 </div>
             </div>
             <hr>
             <div class="footer-cpy">
+                <p>© Copyright 2025, All Rights Reserved by Picverse</p>
+            </div>
+        </div>
+
+        <div class="footer-responsive">
+            <div class="footer-container-responsive">
+                <img src="./assets/picverse-logo.png" class="picverse-logo-responsive">
+            </div>
+            <div class="quick-links">
+                <div class="quick-links-header">
+                    <h3>Quick Links</h3>
+                    <img src="./assets/icons/arrow-down.png" id="arrrow-quick-links">
+                </div>
+                <div class="quick-links-menu">
+                    <p><a href="./about.html">About Us</a></p>
+                    <p><a href="./submission.html">Submission</a></p>
+                    <p><a href="./gallery.html">Gallery</a></p>
+                </div>
+            </div>
+            <div class="contact-us">
+                <div class="contact-us-header">
+                    <h3>Contact Us</h3>
+                    <img src="./assets/icons/arrow-down.png" id="arrow-contact-us">
+                </div>
+                <div class="contact-us-menu">
+                    <p>Creative Street No. 28, Tower B, Jakarta, Indonesia 12950</p>
+                    <p>support@picverseid.com</p>
+                </div>
+            </div>
+            <hr>
+            <div class="responsive-footer-cpy">
                 <p>© Copyright 2025, All Rights Reserved by Picverse</p>
             </div>
         </div>

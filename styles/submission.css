@@ -37,7 +37,7 @@
     padding: 4rem 4rem;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2.5rem;
     align-items: center;
 }
 
@@ -201,6 +201,10 @@ textarea{
     font-family: "Lexend Deca", sans-serif;
     padding: 0.25rem;
     margin-left: 3rem;
+}
+
+.buttons{
+    margin-bottom: 4rem;
 }
 
 .buttons p{

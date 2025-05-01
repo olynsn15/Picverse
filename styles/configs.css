@@ -167,6 +167,11 @@ p{
     gap: 10rem;
 }
 
+.footer-inside a{
+    color: white;
+    cursor: pointer;
+}
+
 hr{
     margin: 2rem 0rem;
 }
@@ -178,6 +183,7 @@ hr{
     font-family: "Lexend Deca", sans-serif;
     font-weight: 400;
     font-size: 0.75em;
+    padding-top: 2rem;
 }
 
 .footer-cpy p{

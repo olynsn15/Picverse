@@ -3,19 +3,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const tags = document.querySelectorAll('.tags');
     const galleryStatus = document.querySelector('.gallery-status');
 
-    const filterButtons = document.querySelectorAll('[onclick^="filterGallery"]');
-
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const category = this.getAttribute('onclick').match(/'([^']+)'/)[1];
+    // Attach event listeners using data-category attributes
+    tags.forEach(tag => {
+        tag.addEventListener("click", function () {
+            const category = this.dataset.category;
             filterGallery(category, this);
         });
     });
 
     function filterGallery(category, selectedTag) {
-        let tagName = selectedTag.textContent.trim();      
-        let isActive = selectedTag.classList.contains('active');
+        const tagName = selectedTag.textContent.trim();
+        const isActive = selectedTag.classList.contains('active');
 
+        // Reset all tags
         tags.forEach(tag => tag.classList.remove('active'));
 
         if (isActive) {
@@ -33,39 +33,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            galleryStatus.textContent = `Displaying ${count} artworks for ${tagName}`; 
+            galleryStatus.textContent = `Displaying ${count} artworks for ${tagName}`;
         }
     }
 
+    // Portrait click opens corresponding modal
     const portraits = document.querySelectorAll('.gallery-item.portrait');
 
-    portraits.forEach((portrait, index) => {
+    portraits.forEach(portrait => {
+        const modalId = portrait.dataset.modalId;
         portrait.addEventListener("click", function () {
-            const modal = document.getElementById(`modal-portrait-${index + 1}`);
-            if (modal) {
-                modal.style.display = "flex";
-            }
+            const modal = document.getElementById(modalId);
+            if (modal) modal.style.display = "flex";
         });
     });
 
+    // Close modal on button click
     const closeButtons = document.querySelectorAll('.modal-close img');
 
     closeButtons.forEach(button => {
         button.addEventListener("click", function () {
             const modal = this.closest('.modal');
-            if (modal) {
-                modal.style.display = "none";
-            }
+            if (modal) modal.style.display = "none";
         });
     });
 
+    // Close modal on outside click
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {
         modal.addEventListener("click", function (e) {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
+            if (e.target === modal) modal.style.display = "none";
         });
     });
-
 });
