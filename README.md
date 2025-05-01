@@ -3,7 +3,6 @@ TO DO
 - Benerin gallery
 - Responsiveness modal
 - Responsiveness gallery
-- Responsive footer
 - Figma vision mission
 - Figma key features
 - Gallery tambah 1 kategori lagi
