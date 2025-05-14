@@ -1,5 +1,5 @@
 /* ABOUT US */
-.about-picverse{
+.about-picverse {
     min-height: fit-content;
     background-color: #F4F0E5;
     display: flex;
@@ -10,7 +10,7 @@
     gap: 4rem;
 }
 
-.about-picverse-text{
+.about-picverse-text {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -22,20 +22,22 @@
     text-align: start;
 }
 
-.about-picverse-text a{
+.about-picverse-text a {
     font-size: 1.35rem;
+    color: #EBE6D6; /* Inherit or set explicitly */
+    text-decoration: none; /* Reset default link style */
 }
 
-.about-picverse-text a:hover{
+.about-picverse-text a:hover {
     background-color: #EBE6D6;
 }
 
-.about-slider-container { 
-    width: 25rem;
-    height: 32.5rem;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+.about-slider-container {
+    width: 26%;
+    aspect-ratio: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     overflow: hidden;
     object-fit: cover;
@@ -54,7 +56,8 @@
     opacity: 1;
 }
 
-.vision-mission{
+/* VISION MISSION */
+.vision-mission {
     min-height: fit-content;
     background-color: #9FC4BD;
     display: flex;
@@ -64,11 +67,11 @@
     gap: 2.5rem;
     padding: 6rem 2rem;
     color: #30645F;
-
 }
 
-.vision-mission h1{
+.vision-mission h1 {
     max-width: 40%;
+    text-align: center; /* Added for better centering */
 }
 
 .vision-mission p {
@@ -76,7 +79,7 @@
     max-width: 50%;
 }
 
-.vision-mission-container{
+.vision-mission-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -84,17 +87,17 @@
     max-width: 80%;
 }
 
-.vm-card{
+.vm-card {
     display: flex;
-    height: fit-content;
-    width: fit-content;
     flex-direction: column;
     align-items: start;
-    padding: 2rem 2rem;
     gap: 1.25rem;
+    padding: 2rem;
     background-color: #B5DAD3;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: fit-content;
+    width: fit-content;
 }
 
 .vm-card:hover {
@@ -103,14 +106,14 @@
     cursor: pointer;
 }
 
-.vm-header{
+.vm-header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
-.vm-header img{
+.vm-header img {
     width: 2.5rem;
     height: 2.5rem;
     padding: 1rem;
@@ -118,18 +121,19 @@
     background-color: #F4F0E5;
 }
 
-.vm-header h2{
+.vm-header h2 {
     font-family: "Space Grotesk", sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
 }
 
-.vm-card p{
+.vm-card p {
     text-align: justify;
     max-width: 100%;
 }
 
-.key-features{
+/* KEY FEATURES */
+.key-features {
     min-height: fit-content;
     background-color: #F4F0E5;
     display: flex;
@@ -141,12 +145,12 @@
     color: #30645F;
 }
 
-.key-features p{
+.key-features p {
     max-width: 55%;
     text-align: center;
 }
 
-.key-features-container{
+.key-features-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -154,17 +158,17 @@
     max-width: 80%;
 }
 
-.kf-card{
+.kf-card {
     display: flex;
-    height: fit-content;
-    width: fit-content;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 2rem;
     gap: 2rem;
+    padding: 2rem;
     background-color: #EBE6D6;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: fit-content;
+    width: fit-content;
 }
 
 .kf-card:hover {
@@ -184,19 +188,23 @@
     padding: 1rem;
 }
 
-.icon-container img{
+.icon-container img {
     width: 4rem;
     height: 4rem;
 }
 
-
-.kf-card h2{
+.kf-card h2 {
     font-family: "Space Grotesk", sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
+    text-align: center; /* Added for better centering */
 }
 
-.kf-card p{
-    text-align: justify;
+.kf-card p {
+    text-align: justify; /* Added for better centering */
     max-width: 100%;
+}
+
+.kf-card > .buttons{
+    font-size: 1em;
 }

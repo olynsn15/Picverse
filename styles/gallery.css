@@ -1,5 +1,5 @@
 /* GALLERY */
-.gallery{
+.gallery {
     min-height: 100vh;
     background-color: #F4F0E5;
     display: flex;
@@ -10,30 +10,26 @@
     gap: 1.5rem;
 }
 
-.gallery h1{
+.gallery h1 {
     font-size: 2.25em;
 }
 
-.gallery-status{
+.gallery-status {
     color: #30645F;
     font-size: 1.15em;
 }
 
-.gallery-tags-container{
+.gallery-tags-container {
     display: flex;
     gap: 0.75rem;
     padding-bottom: 2rem;
 }
 
-.gallery-tags-container p{
+.gallery-tags-container p {
     font-size: 1.15em;
 }
 
-.gallery-status{
-    font-size: 1em;
-}
-
-.gallery-parent{
+.gallery-parent {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,20 +53,19 @@
     flex-basis: auto;
 }
 
-
-.gallery-item h2{
-    font-family: "Lexend Deca", sans-serif;
+.gallery-item h2 {
     color: #30645F;
+    font-family: "Lexend Deca", sans-serif; /* Restored font-family */
     font-weight: 500;
     font-size: 1.25em;
 }
 
-.gallery-item p{
+.gallery-item p {
     color: #30645F;
     font-size: 1em;
 }
 
-.gallery-item img{
+.gallery-item img {
     width: 16rem;
     height: 16rem;
     object-fit: cover;
@@ -78,11 +73,14 @@
     box-shadow: rgba(0, 0, 0, 0.200) 0px 4px 8px;
 }
 
-.portrait img, .portrait h2, .portrait p{
+.portrait img,
+.portrait h2,
+.portrait p {
     cursor: pointer;
 }
 
-.modal{
+/* MODAL */
+.modal {
     display: none;
     position: fixed;
     top: 0;
@@ -92,11 +90,11 @@
     align-items: center;
     width: 100vw;
     height: 110vh;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
 }
 
-.modal-content{
+.modal-content {
     background-color: white;
     border-radius: 20px;
     padding: 1.5rem 2rem;
@@ -106,20 +104,20 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.modal-close{
+.modal-close {
     display: flex;
     flex-direction: row;
     justify-content: end;
     padding-bottom: 1rem;
 }
 
-.modal-close img{
+.modal-close img {
     width: 5%;
     aspect-ratio: 1/1;
     cursor: pointer;
 }
 
-.modal-body{
+.modal-body {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -127,13 +125,13 @@
     width: 100%;
 }
 
-.modal-body img{
+.modal-body img {
     width: 45%;
     aspect-ratio: 1/1;
     object-fit: contain;
 }
 
-.modal-text{
+.modal-text {
     align-items: start;
     justify-content: start;
     display: flex;
@@ -144,46 +142,45 @@
     width: 42.5%;
 }
 
-.modal-info{
+.modal-info {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.modal-header{
+.modal-header {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.modal-header h2{
+.modal-header h2 {
     font-size: 2.25em;
     font-weight: 600;
 }
 
-.modal-header h3{
+.modal-header h3 {
     font-size: 1.25em;
     font-weight: 500;
 }
 
-.modal-header .tags{
+.modal-header .tags {
     font-size: 0.75em;
     font-weight: 400;
     padding: 0.5rem 0.75rem;
     border-radius: 15px;
 }
 
-.modal-desc p{
+.modal-desc p {
     font-size: 0.85em;
 }
 
-.modal-like{
+.modal-like {
     display: flex;
     flex-direction: row;
     justify-content: end;
     width: 100%;
 }
-
 
 .modal-like-content {
     display: flex;
@@ -197,10 +194,10 @@
     border-radius: 25px;
 }
 
-.modal-like-content img{
+.modal-like-content img {
     width: 30%;
 }
 
-.modal-like-content p{
+.modal-like-content p {
     color: white;
 }

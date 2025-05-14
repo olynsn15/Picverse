@@ -1,5 +1,5 @@
 /* COMMUNITY */
-.community{
+.community {
     min-height: 100vh;
     background-color: #9FC4BD;
     display: flex;
@@ -10,86 +10,87 @@
     justify-content: center;
 }
 
-.activity-profile, .recent-activity{
+.activity-profile,
+.recent-activity {
     width: 18%;
 }
 
-.activity-profile-content{
+.activity-profile-content {
     height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.community-card{
+.community-card {
     background-color: white;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.160) 0px 4px 4px;
 }
 
-.recent-activity-container{
+.recent-activity-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.community-container{
+.community-container {
     padding: 1.3rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.community h2{
+.community h2 {
     font-family: "Space Grotesk", sans-serif;
     color: #30645F;
     font-size: 1.15em;
 }
 
-.community h3{
+.community h3 {
     font-family: "Space Grotesk", sans-serif;
     color: #30645F;
 }
 
-.profile{
+.profile {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
     align-items: center;
 }
 
-.profile img{
+.profile img {
     width: 40%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.username{
+.username {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.35rem;
 }
 
-.username h4{
+.username h4 {
     font-family: "Lexend Deca", sans-serif;
     color: #30645F;
     font-size: 0.9em;
     font-weight: 500;
 }
 
-.username p{
+.username p {
     font-size: 0.8em;
     color: #55928c;
 }
 
-#profile-divider{
+#profile-divider {
     margin: 0rem 1.25rem;
     color: #30645F;
 }
 
-.active-users-container{
+.active-users-container {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
@@ -97,35 +98,47 @@
     overflow-y: auto;
 }
 
-.active-profile{
+.active-profile {
     display: flex;
     flex-direction: row;
+    align-items: flex-start; /* Or center, try both */
     gap: 1rem;
+    width: 100%;
 }
 
-.active-profile img{
-    width: 18%;
+.active-profile img {
+    width: auto;
+    height: auto;
+    max-width: 20%; /* Or your desired initial size */
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0; /* Prevent the image from shrinking below its content size */
 }
 
-.active-username{
+.active-username {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
+    min-width: 0; /* Allow the text to shrink if needed */
 }
 
-.active-username h4{
+.active-username h4 {
     font-family: "Lexend Deca", sans-serif;
     color: #30645F;
     font-size: 0.75em;
     font-weight: 500;
+    white-space: nowrap; /* Prevent username from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis if it overflows */
 }
 
-.active-username p{
+.active-username p {
     font-size: 0.65em;
     color: #55928c;
+    white-space: nowrap; /* Prevent description from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis if it overflows */
 }
 
 .forum {
@@ -134,7 +147,7 @@
     max-height: 100vh;
 }
 
-.forum-container{
+.forum-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -142,11 +155,7 @@
     margin-bottom: 4rem;
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
-
-.post-forum{
+.post-forum {
     background-color: white;
     width: 100%;
     height: fit-content;
@@ -159,7 +168,7 @@
     box-shadow: rgba(0, 0, 0, 0.160) 0px 2px 4px;
 }
 
-.post-forum-input{
+.post-forum-input {
     font-family: "Lexend Deca", sans-serif;
     width: 80%;
     padding: 0.75rem;
@@ -170,7 +179,8 @@
     color: #30645F;
 }
 
-.post-forum > .buttons, .profile > .buttons{
+.post-forum > .buttons,
+.profile > .buttons {
     color: white;
     font-size: 1em;
     padding: 0.85rem 1rem;
@@ -178,12 +188,13 @@
     border-radius: 5px;
 }
 
-.profile > .buttons{
+.profile > .buttons {
     padding: 0.75rem 2rem;
     font-size: 0.75em;
 }
 
-.post-forum > .buttons:hover, .profile > .buttons:hover{
+.post-forum > .buttons:hover,
+.profile > .buttons:hover {
     color: #DD7B55;
     font-size: 1em;
     padding: 0.85rem 1rem;
@@ -191,7 +202,12 @@
     border-radius: 5px;
 }
 
-.forum-item{
+.profile > .buttons:hover {
+    padding: 0.75rem 2rem;
+    font-size: 0.75em;
+}
+
+.forum-item {
     background-color: white;
     width: 100%;
     height: fit-content;
@@ -204,7 +220,7 @@
     box-shadow: rgba(0, 0, 0, 0.160) 0px 2px 4px;
 }
 
-.forum-header{
+.forum-header {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -212,7 +228,7 @@
     align-items: center;
 }
 
-.forum-profile{
+.forum-profile {
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -220,43 +236,46 @@
     gap: 0.5rem;
 }
 
-.forum-profile img{
+.forum-profile img {
     width: 2rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.forum-header p{
+.forum-header p {
     font-size: 0.9em;
 }
 
-.forum-text{
+.forum-text {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding-bottom: 0.75rem;
 }
 
-.forum-text h2{
+.forum-text h2 {
     font-family: "Lexend Deca", sans-serif;
     font-size: 1.4em;
     font-weight: 550;
+    color: #30645F; /* Restored color */
 }
 
-.forum-text p{
+.forum-text p {
     font-size: 0.9em;
     font-weight: 400;
+    color: #30645F; /* Restored color */
 }
 
-.likes-comments{
+.likes-comments {
     display: flex;
     flex-direction: row;
     width: fit-content;
     gap: 2rem;
 }
 
-.likes, .comments{
+.likes,
+.comments {
     width: fit-content;
     display: flex;
     flex-direction: row;
@@ -264,20 +283,23 @@
     align-items: center;
 }
 
-.likes img, .comments img{
+.likes img,
+.comments img {
     width: 1.15rem;
     aspect-ratio: 1/1;
 }
 
-.likes p, .comments p{
+.likes p,
+.comments p {
     font-size: 1em;
+    color: #30645F; /* Restored color */
 }
 
-#view-all{
+#view-all {
     margin-top: 1.5rem;
 }
 
-.activity-item{
+.activity-item {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -285,14 +307,19 @@
     align-items: center;
 }
 
-.activity-item img{
+.activity-item img {
     width: 20%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.activity-item p{
+.activity-item p {
     font-size: 0.65em;
     text-align: start;
+    white-space: normal;
+    overflow-wrap: break-word;
+    flex-grow: 1; /* Allow the paragraph to take up the remaining space */
+    min-width: 0; /* Important for allowing text to wrap if the container is narrow */
+    color: #30645F; /* Restored color */
 }

@@ -28,6 +28,7 @@
 
     .hamburger-menu {
         height: 30px;
+        cursor: pointer;
     }
 
     .picverse-logo-responsive {
@@ -85,7 +86,20 @@
         max-width: 40rem;
     }
 
+    /* FONTS */
+    h1 {
+        font-size: 2.3em;
+    }
+
+    p {
+        font-size: 1.05em;
+    }
+
     /* HOME */
+    .artwork-info {
+        bottom: 4rem;
+    }
+
     .intro{
         flex-direction: column;
         padding: 6rem 0rem;
@@ -99,53 +113,39 @@
     }
 
     .intro-text{
-        display: flex;
         flex-direction: column;
         max-width: 70%;
         padding: 1.5rem;
         gap: 2rem;
-        color: #30645F;
     }
 
     .trending-tags-text {
         padding: 2rem;
         max-width: 75%;
-        flex-shrink: 1;
     }
 
-    .featured-artworks-text {
-        max-width: 80%;
-    }
-
-    .fa-container {
-        display: flex;
-        flex-direction: row-;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 90%;
+    .tags-container .tags{
+        font-size: 1em;
     }
 
     /* GALLERY */
     .gallery-tags-container{
         flex-wrap: wrap;
-        flex-shrink: 10;
         max-width: 45rem;
-    }
-    
-    .gallery-tags-container p{
-        font-size: 1em;
     }
 
     .modal-content{
-        width: 40%;
+        width: 50%;
+        padding: 1.5rem 1rem;
+        margin-bottom: 0.15rem;
     }
 
     .modal-body{
-        display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.25rem;
         width: 100%;
         align-items: center;
+        padding-bottom: 1rem;
     }
 
     .modal-body img{
@@ -156,22 +156,23 @@
 
     .modal-text{
         width: 80%;
+        gap: 2rem;
     }
 
     .modal-header h2{
-        font-size: 1.9em;
+        font-size: 1.2em;
     }
     
     .modal-header h3{
-        font-size: 1em;
+        font-size: 0.9em;
     }
     
     .modal-header .tags{
-        font-size: 0.85em;
+        font-size: 0.65em;
     }
     
     .modal-desc p{
-        font-size: 0.75em;
+        font-size: 0.65em;
     }
 
     .modal-like-content img{
@@ -180,15 +181,15 @@
 
     /* ABOUT US */
     .about-picverse{
-        display: flex;
         flex-direction: column-reverse;
         padding: 4rem 2rem;
         gap: 4rem;
     }
 
     .about-picverse-text{
-        max-width: 90%;
+        max-width: 80%;
         align-items: center;
+        padding-bottom: 1rem;
     }
 
     .about-picverse-text h1 {
@@ -196,18 +197,22 @@
     }
 
     .about-slider-container { 
-        width:30rem;
-        height: 40rem;
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        position: relative;
-        overflow: hidden;
-        object-fit: cover;
+        width: 60%;
+        aspect-ratio: 3/4;
     }
 
     .vision-mission h1{
         max-width: 80%;
+    }
+
+    .vm-header img {
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0.65rem;
+    }
+
+    .vm-header h2{
+        font-size: 1.85em;;
     }
     
     .vision-mission p {
@@ -234,7 +239,24 @@
     .key-features-container p{
         max-width: 100%;
     }
-    
+
+    .icon-container {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .icon-container img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .kf-card h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 2.15rem;
+        font-weight: bold;
+        text-align: center; /* Added for better centering */
+    }
+
     /* COMMUNITY */
     .forum{
         order: 1;
@@ -286,10 +308,6 @@
         display: none;
     }
 
-    .profile img{
-        width: 7.5%;
-    }
-
     .profile > .buttons{
         display: none;
     }
@@ -323,7 +341,7 @@
     }
 
     .active-profile img{
-        width: 60%;
+        max-width: 50%;
         aspect-ratio: 1/1;
         border-radius: 50%;
         object-fit: cover;
@@ -336,7 +354,7 @@
     .forum {
         max-height: fit-content;
         width: 100%;
-        padding-bottom: 3rem;
+        padding-bottom: 4rem;
     }
 
     .forum-container{
@@ -351,11 +369,12 @@
     }
 
     #recent-activity-container img{
-        width: 9.5%;
+        width: 6.5%;
     }
 
     #recent-activity-container p{
         max-width: 85%;
+        font-size: 0.75em;
     }
 
     .activity-item{
@@ -366,18 +385,9 @@
         align-items: center;
     }
     
-    .activity-item img{
-        width: 7.5%;
-    }
-    
     .activity-item p{
         font-size: 0.85em;
         text-align: start;
-    }
-
-    /* SUBMISSION */
-    .submission-text{
-        max-width: 85%;
     }
 
     /* FOOTER */
@@ -394,6 +404,10 @@
 
     .picverse-logo-footer{
         height: 20px;
+    }
+
+    .arrow{
+        cursor: pointer;
     }
 
     hr{
@@ -438,6 +452,7 @@
 
     .quick-links-header img, .contact-us-header img{
         height: 25px;
+        cursor: pointer;
     }
 
     .quick-links p, .contact-us p{
@@ -459,5 +474,112 @@
 
     .quick-links-menu.show, .contact-us-menu.show {
         max-height: 100px; 
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    /* HOME */
+    .tagline h1 {
+        max-width: 20rem;
+        font-size: 3.25em;
+    }
+
+    .trending-tags-text {
+        padding: 2rem;
+        max-width: 60%;
+        flex-shrink: 1;
+    }
+
+    .featured-artworks-text {
+        max-width: 80%;
+    }
+
+    .fa-container {
+        display: flex;
+        flex-direction: row-;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 90%;
+    }
+
+    /* GALLERY */
+    .gallery-tags-container p{
+        font-size: 1em;
+    }
+
+    /* SUBMISSION */
+    .alert img{
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .alert p{
+        font-size: 1em;
+        font-weight: 500;
+    }
+
+    .submission-text{
+        max-width: 85%;
+    }
+
+    .buttons p{
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.85em;
+    }
+
+    /* HOME */
+    .tagline h1 {
+        max-width: 20rem;
+        font-size: 2.5em;
+    }
+
+    .tagline > .buttons,
+    .intro-text > .buttons {
+        font-size: 1.15em;
+    }
+
+    .artwork-info p {
+        font-size: 0.8em;
+    }
+
+    /* GALLERY */
+    .gallery-tags-container{
+        max-width: 20rem;
+    }
+
+    .modal-content{
+        width: 70%;
+    }
+
+    /* ABOUT US */
+    .about-picverse-text > .buttons {
+        font-size: 1.15em;
+    }
+
+    /* SUBMISSION */
+    .alert p{
+        font-size: 0.75em;
+    }
+
+    .submission-text{
+        max-width: 75%;
+    }
+
+    .buttons p{
+        font-size: 0.65em;
+    }
+
+    .submission-container{
+        padding: 4rem 2rem;
     }
 }

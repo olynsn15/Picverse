@@ -1,4 +1,5 @@
-.hero{
+/* HERO SECTION */
+.hero {
     background-color: #30645F;
     width: 100%;
     height: fit-content;
@@ -12,22 +13,22 @@
 }
 
 .slider-container {
-    position: relative; 
+    position: relative;
     width: 100%;
     height: 100vh;
-    overflow: hidden; 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slider-image {
-    filter: blur(1px);
     position: absolute;
     width: 100%;
     height: 100%;
-    opacity: 0;
     object-fit: cover;
+    filter: blur(1px);
+    opacity: 0;
 }
 
 .slider-image.active {
@@ -36,6 +37,8 @@
 
 .tagline {
     position: absolute;
+    top: 0; /* Ensure it covers the full height */
+    left: 0; /* Ensure it covers the full width */
     width: 100%;
     height: 100%;
     display: flex;
@@ -46,61 +49,58 @@
     padding-bottom: 5rem;
 }
 
-.tagline h1{
+.tagline h1 {
     color: white;
     text-align: center;
     max-width: 50rem;
     font-size: 4em;
-    text-align: center;
 }
 
-.artwork-info{
+.artwork-info {
     position: absolute;
-    bottom: 8rem;
+    bottom: 6rem;
     right: 3rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     font-size: 1.1rem;
-    font-family: "Lexend Deca", sans-serif;
     opacity: 0;
 }
 
-.artwork-info p{
+.artwork-info p {
     color: white;
 }
 
-.artwork-info.active{
+.artwork-info.active {
     opacity: 1;
 }
 
-.intro{
-    min-height: fit-content;
+/* INTRO SECTION */
+.intro {
     background-color: #9FC4BD;
+    min-height: fit-content;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.intro-text{
+.intro-text {
     display: flex;
     flex-direction: column;
     max-width: 45%;
     padding: 8rem;
     gap: 2rem;
-    color: #30645F;
 }
 
-.intro-text h1{
+.intro-text h1 {
     text-align: start;
 }
 
-
-#intro-p-1{
+#intro-p-1 {
     margin-bottom: 0.75rem;
 }
 
-#intro-img{
+#intro-img {
     width: 40%;
     height: 80vh;
     object-fit: cover;
@@ -109,9 +109,10 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* TRENDING TAGS SECTION */
 .trending-tags {
-    min-height: fit-content; 
     background-color: #F4F0E5;
+    min-height: fit-content;
     padding: 6rem 2rem;
     display: flex;
     align-items: center;
@@ -124,7 +125,10 @@
     max-width: 60%;
     padding: 4rem;
     gap: 2.5rem;
-    color: #30645F;
+}
+
+.trending-tags-text h1 {
+    text-align: center;
 }
 
 .trending-tags-text p {
@@ -139,9 +143,10 @@
     max-width: 100%;
 }
 
-.featured-artworks{
-    min-height: fit-content;
+/* FEATURED ARTWORKS SECTION */
+.featured-artworks {
     background-color: #9FC4BD;
+    min-height: fit-content;
     padding: 6rem 2rem;
     display: flex;
     flex-direction: column;
@@ -154,14 +159,17 @@
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
-    color: #30645F;
+}
+
+.featured-artworks-text h1 {
+    text-align: center;
 }
 
 .featured-artworks-text p {
     text-align: center;
 }
 
-.fa-container{
+.fa-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -169,26 +177,26 @@
     max-width: 100%;
 }
 
-.fa-card{
-    width: fit-content;
+.fa-card {
     background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
+    flex-shrink: 1;
+    gap: 1rem;
     margin: 1rem;
     padding: 1rem;
-    border-radius: 20px;
-    gap: 1rem;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    flex-shrink: 1;
+    width: fit-content;
 }
 
 .fa-card:hover {
-    transform: scale(1.05); /* Slightly enlarges the card */
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; /* Stronger shadow */
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px;
+    transform: scale(1.05);
 }
 
-.fa-card img{
+.fa-card img {
     width: 14rem;
     height: 14rem;
     object-fit: cover;
@@ -200,21 +208,19 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-    font-family: "Lexend Deca", sans-serif;
-    color: #30645F;
 }
 
 .fa-art-content .art-title {
-    font-weight: 500;
     font-size: 1.15rem;
+    font-weight: 500;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .fa-art-content .art-artist {
-    font-weight: 400;
     font-size: 0.85rem;
+    font-weight: 400;
 }
 
 .art-likes {
@@ -228,19 +234,10 @@
     width: 1rem;
     height: 1rem;
     object-fit: contain;
-    border-radius: 0px;
+    border-radius: 0;
 }
 
 .art-likes p {
-    font-weight: 400;
     font-size: 1.2rem;
+    font-weight: 400;
 }
-
-
-
-
-
-
-
-
-
