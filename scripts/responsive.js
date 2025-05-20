@@ -4,6 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let menuOpen = false;
 
+    const arrowQuickLinks = document.getElementById("arrrow-quick-links");
+    const quickLinksMenu = document.querySelector(".quick-links-menu");
+    const arrowContactUs = document.getElementById("arrow-contact-us");
+    const contactUsMenu = document.querySelector(".contact-us-menu");
+
+    let quickLinksMenuOpen = false;
+    let contactUsMenuOpen = false;
+
     hamburger.addEventListener("click", function () {
         menuOpen = !menuOpen;
 
@@ -15,14 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
             hamburger.src = "./assets/icons/hamburger.png";
         }
     });
-
-    const arrowQuickLinks = document.getElementById("arrrow-quick-links");
-    const quickLinksMenu = document.querySelector(".quick-links-menu");
-    const arrowContactUs = document.getElementById("arrow-contact-us");
-    const contactUsMenu = document.querySelector(".contact-us-menu");
-
-    let quickLinksMenuOpen = false;
-    let contactUsMenuOpen = false;
     
     arrowQuickLinks.addEventListener("click", function () {
         quickLinksMenuOpen = !quickLinksMenuOpen;

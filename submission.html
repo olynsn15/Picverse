@@ -56,7 +56,7 @@
                     Fill out the form below to upload your work and share it with the community.</p>
             </div>
         </div>
-        <div class="submission-container">
+        <form class="submission-container">
             <div class="alert">
                 <img src="./assets/icons/alert.png">
                 <p>
@@ -67,37 +67,34 @@
                 <div class="form-input" id="email-container">
                     <div class="question-container">
                         <p class="number">1</p>
-                        <p class="label">Email</p>
+                        <label for="email-input">Email</label>
                     </div>
                     <div class="input-container">
                         <input type="email" id="email-input" class="input-box" placeholder="Enter your email">
                     </div>
-                    <div class="error-message" id="email-error"></div>
                 </div>
                 <div class="form-input" id="title-container">
                     <div class="question-container">
                         <p class="number">2</p>
-                        <p class="label">Title</p>
+                        <label for="title-input">Title</label>
                     </div>
                     <div class="input-container">
                         <input type="text" id="title-input" class="input-box" placeholder="Enter your artwork title">
                     </div>
-                    <div class="error-message" id="title-error"></div>
                 </div>
                 <div class="form-input" id="description-container">
                     <div class="question-container">
                         <p class="number">3</p>
-                        <p class="label">Description</p>
+                        <label for="description-input">Description</label>
                     </div>
                     <div class="input-container">
                         <textarea id="description-input" class="input-box" placeholder="Briefly describe your artwork"></textarea>
                     </div>
-                    <div class="error-message" id="description-error"></div>
                 </div>
                 <div class="form-input" id="tags-container">
                     <div class="question-container">
                         <p class="number">4</p>
-                        <p class="label">Tags</p>
+                        <label for="tags-input">Tags</label>
                     </div>
                     <div class="input-container">
                         <select id="tags-input" class="input-box">
@@ -109,45 +106,38 @@
                             <option>#AbstractArt</option>
                         </select>
                     </div>
-                    <div class="error-message" id="tags-error"></div>
                 </div>
                 <div class="form-input" id="file">
                     <div class="question-container">
                         <p class="number">5</p>
-                        <p class="label">Upload</p>
+                        <label for="file-upload">Upload</label>
                     </div>
-                    <div class="input-container">
-                        <label class="upload-box">
-                            <input type="file" id="file-upload" class="input-box" hidden accept="image/*">
+                    <label class="input-container">
+                        <div class="upload-box">
                             <span class="buttons">Choose file</span>
+                            <input type="file" id="file-upload" class="input-box" hidden accept="image/*" onchange="validateFile(this)">
                             <div class="error-message" id="file-error" style="display: none;"></div>
                             <p id="file-name" class="file-name">No file chosen</p>
                             <img id="file-thumbnail" class="file-thumbnail" src="" alt="" hidden>
-                        </label>
-                    </div>
+                        </div>
+                    </label>
                 </div>                              
                 <div class="form-input" id="AI-generated">
                     <div class="question-container">
                         <p class="number">6</p>
-                        <p class="label">Is this content AI generated?</p>
+                        <label for="ai-input">Is this content AI generated?</label>
                     </div>
-                    <div class="input-container">
-                        <label class="radio-label">
-                            <input type="radio" name="ai-generated" value="yes" class="radio-input">
-                            Yes
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" name="ai-generated" value="no" class="radio-input">
-                            No
-                        </label>
+                    <div class="input-container" id="ai-input">
+                        <input type="radio" name="ai-choice" id="yes" class="radio-input">
+                        <label for="male">Yes</label>
+
+                        <input type="radio" name="ai-choice" id="no" class="radio-input">
+                        <label for="female">No</label>
                     </div>
-                    <div class="error-message" id="AI-radio-error"></div>
                 </div>
             </div>
-            <div class="buttons" id="submit-button">
-                <p>Submit</p>
-            </div>
-        </div>
+            <input type="submit" value="Submit" class="buttons" id="submit-button" onclick="validateForm()">
+        </form>
     </main>
 
     <footer>

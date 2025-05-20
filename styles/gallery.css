@@ -41,7 +41,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
-    justify-content: center; /* left-align all rows */
+    justify-content: center; 
     padding-bottom: 5rem;
 }
 
@@ -55,7 +55,7 @@
 
 .gallery-item h2 {
     color: #30645F;
-    font-family: "Lexend Deca", sans-serif; /* Restored font-family */
+    font-family: "Lexend Deca", sans-serif;
     font-weight: 500;
     font-size: 1.25em;
 }
@@ -73,9 +73,7 @@
     box-shadow: rgba(0, 0, 0, 0.200) 0px 4px 8px;
 }
 
-.portrait img,
-.portrait h2,
-.portrait p {
+.portrait img, .portrait h2, .portrait p {
     cursor: pointer;
 }
 

@@ -37,8 +37,8 @@
 
 .tagline {
     position: absolute;
-    top: 0; /* Ensure it covers the full height */
-    left: 0; /* Ensure it covers the full width */
+    top: 0; 
+    left: 0; 
     width: 100%;
     height: 100%;
     display: flex;

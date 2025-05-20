@@ -113,6 +113,7 @@ p {
     padding: 0.75rem 1.5rem;
     text-decoration: none;
     width: fit-content;
+    border-color: transparent;
 }
 
 .buttons:hover {
@@ -170,8 +171,7 @@ p {
     cursor: pointer;
 }
 
-.quick-links,
-.contact-us {
+.quick-links, .contact-us {
     color: white;
     display: flex;
     flex-direction: column;
@@ -181,8 +181,7 @@ p {
     gap: 1.25rem;
 }
 
-.quick-links p,
-.contact-us p {
+.quick-links p, .contact-us p {
     color: white;
     font-weight: 400;
 }

@@ -10,8 +10,7 @@
     justify-content: center;
 }
 
-.activity-profile,
-.recent-activity {
+.activity-profile, .recent-activity {
     width: 18%;
 }
 
@@ -101,7 +100,7 @@
 .active-profile {
     display: flex;
     flex-direction: row;
-    align-items: flex-start; /* Or center, try both */
+    align-items: flex-start; 
     gap: 1rem;
     width: 100%;
 }
@@ -109,18 +108,18 @@
 .active-profile img {
     width: auto;
     height: auto;
-    max-width: 20%; /* Or your desired initial size */
+    max-width: 20%; 
     aspect-ratio: 1/1;
     border-radius: 50%;
     object-fit: cover;
-    flex-shrink: 0; /* Prevent the image from shrinking below its content size */
+    flex-shrink: 0; 
 }
 
 .active-username {
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
-    min-width: 0; /* Allow the text to shrink if needed */
+    min-width: 0; 
 }
 
 .active-username h4 {
@@ -128,17 +127,17 @@
     color: #30645F;
     font-size: 0.75em;
     font-weight: 500;
-    white-space: nowrap; /* Prevent username from wrapping */
+    white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis; /* Show ellipsis if it overflows */
+    text-overflow: ellipsis; 
 }
 
 .active-username p {
     font-size: 0.65em;
     color: #55928c;
-    white-space: nowrap; /* Prevent description from wrapping */
+    white-space: nowrap; 
     overflow: hidden;
-    text-overflow: ellipsis; /* Show ellipsis if it overflows */
+    text-overflow: ellipsis; 
 }
 
 .forum {
@@ -170,7 +169,7 @@
 
 .post-forum-input {
     font-family: "Lexend Deca", sans-serif;
-    width: 80%;
+    width: 90%;
     padding: 0.75rem;
     background-color: rgb(241, 241, 241);
     outline: none;
@@ -179,8 +178,7 @@
     color: #30645F;
 }
 
-.post-forum > .buttons,
-.profile > .buttons {
+.post-forum > .buttons, .profile > .buttons {
     color: white;
     font-size: 1em;
     padding: 0.85rem 1rem;
@@ -193,8 +191,7 @@
     font-size: 0.75em;
 }
 
-.post-forum > .buttons:hover,
-.profile > .buttons:hover {
+.post-forum > .buttons:hover, .profile > .buttons:hover {
     color: #DD7B55;
     font-size: 1em;
     padding: 0.85rem 1rem;
@@ -274,8 +271,7 @@
     gap: 2rem;
 }
 
-.likes,
-.comments {
+.likes, .comments {
     width: fit-content;
     display: flex;
     flex-direction: row;
@@ -283,14 +279,12 @@
     align-items: center;
 }
 
-.likes img,
-.comments img {
+.likes img, .comments img {
     width: 1.15rem;
     aspect-ratio: 1/1;
 }
 
-.likes p,
-.comments p {
+.likes p, .comments p {
     font-size: 1em;
     color: #30645F; /* Restored color */
 }

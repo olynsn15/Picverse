@@ -24,8 +24,8 @@
 
 .about-picverse-text a {
     font-size: 1.35rem;
-    color: #EBE6D6; /* Inherit or set explicitly */
-    text-decoration: none; /* Reset default link style */
+    color: #EBE6D6; 
+    text-decoration: none;
 }
 
 .about-picverse-text a:hover {
@@ -71,7 +71,7 @@
 
 .vision-mission h1 {
     max-width: 40%;
-    text-align: center; /* Added for better centering */
+    text-align: center; 
 }
 
 .vision-mission p {
@@ -101,8 +101,8 @@
 }
 
 .vm-card:hover {
-    transform: scale(1.05); /* Slightly enlarges the card */
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; /* Stronger shadow */
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; 
     cursor: pointer;
 }
 
@@ -172,8 +172,8 @@
 }
 
 .kf-card:hover {
-    transform: scale(1.05); /* Slightly enlarges the card */
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; /* Stronger shadow */
+    transform: scale(1.05); 
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; 
     cursor: pointer;
 }
 
@@ -197,11 +197,11 @@
     font-family: "Space Grotesk", sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
-    text-align: center; /* Added for better centering */
+    text-align: center; 
 }
 
 .kf-card p {
-    text-align: justify; /* Added for better centering */
+    text-align: justify; 
     max-width: 100%;
 }
 

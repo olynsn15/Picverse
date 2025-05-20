@@ -1,217 +1,137 @@
-document.addEventListener("DOMContentLoaded", function () {
+function validateForm(form) {
     const fileInput = document.getElementById("file-upload");
-    const fileError = document.getElementById("file-error");
-    const fileNameDisplay = document.getElementById("file-name");
-    const fileThumbnail = document.getElementById("file-thumbnail");
-    const uploadButton = document.querySelector(".buttons");
-    const uploadBox = document.querySelector(".upload-box");
-
     const emailInput = document.getElementById("email-input");
-    const emailError = document.getElementById("email-error");
     const titleInput = document.getElementById("title-input");
-    const titleError = document.getElementById("title-error");
     const descriptionInput = document.getElementById("description-input");
-    const descriptionError = document.getElementById("description-error");
     const tagsInput = document.getElementById("tags-input");
-    const tagsError = document.getElementById("tags-error");
-    const aiRadioButtons = document.querySelectorAll('input[name="ai-generated"]');
-    const aiError = document.getElementById("AI-radio-error");
+    const yes = document.getElementById("yes");
+    const no = document.getElementById("no");
 
-    const submitButton = document.getElementById("submit-button");
+    if (!validateEmail(emailInput)) return false;
+    else if (!validateTitle(titleInput)) return false;
+    else if (!validateDescription(descriptionInput)) return false;
+    else if (!validateTags(tagsInput)) return false;
+    else if (!validateFile(fileInput)) return false;
+    else if (!validateAIRadio(yes, no)) return false;
 
-    if (!fileInput || !fileNameDisplay || !fileThumbnail) {
-        console.error("File input or related elements not found.");
-        return;
+    alert("Submission successful!");
+    return true;
+}
+
+function validateEmail(emailInput) {
+    let email = emailInput.value;
+    let hasAt = false;
+    let hasDot = false;
+
+    for (let i = 0; i < email.length; i++) {
+        if (email[i] === "@") {
+            hasAt = true;
+        }
+        if (email[i] === ".") {
+            hasDot = true;
+        }
     }
 
-    fileInput.addEventListener("change", function () {
-        if (fileInput.files.length === 0) {
-            fileError.textContent = "You must upload an image.";
-            fileError.style.display = "block";
-            fileThumbnail.hidden = true;
-            fileNameDisplay.textContent = "No file chosen";
-            return;
-        }
-
-        fileError.textContent = "";
-        fileError.style.display = "none";
-
-        const file = fileInput.files[0];
-        console.log("File selected:", file.name);  
-
-        fileNameDisplay.textContent = file.name; 
-
-        if (file.type.startsWith("image/")) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                fileThumbnail.src = e.target.result;
-                fileThumbnail.hidden = false; 
-            };
-            reader.readAsDataURL(file);
-        } else {
-            fileThumbnail.hidden = true;
-        }
-
-        if (uploadButton) {
-            uploadButton.style.display = "none";
-        }
-    });
-
-    if (uploadBox) {
-        uploadBox.addEventListener("click", function () {
-            if (uploadButton) {
-                uploadButton.style.display = "inline-block";
-            }
-        });
+    if (email.trim() === "") {
+        alert("Email cannot be empty");
+        return false;
     }
 
-    function validateEmail() {
-        if (!emailInput) return false;
-        const email = emailInput.value.trim();
-        if (email === "") {
-            emailError.textContent = "Email cannot be empty";
-            emailError.style.display = "flex";
-            return false;
-        } else if (!email.includes("@") || !email.includes(".")) {
-            emailError.textContent = "Please enter a valid email (must contain '@' and '.')";
-            emailError.style.display = "flex";
-            return false;
-        }
-        emailError.textContent = "";
-        emailError.style.display = "none";
+    else if (!hasAt || !hasDot) {
+        alert("Email must contain '@' and '.'");
+        return false;
+    }
+
+    else {
         return true;
     }
+}
 
-    function validateTitle() {
-        if (!titleInput) return false;
-        const title = titleInput.value.trim();
-        if (title === "") {
-            titleError.textContent = "Title cannot be empty";
-            titleError.style.display = "flex";
-            return false;
-        } else if (title.length < 3) {
-            titleError.textContent = "Title must be at least 3 characters long";
-            titleError.style.display = "flex";
-            return false;
-        }
-        titleError.textContent = "";
-        titleError.style.display = "none";
+function validateTitle(titleInput) {
+    let title = titleInput.value;
+
+    if (title.trim() === "") {
+        alert("Title cannot be empty");
+        return false;
+    }
+
+    else if (title.trim().length < 3) {
+        alert("Title must be at least 3 characters long");
+        return false;
+    }
+
+    else {
         return true;
     }
+}
 
+function validateDescription(descriptionInput) {
+    let desc = descriptionInput.value;
 
-    function validateDescription() {
-        if (!descriptionInput) return false;
-        const description = descriptionInput.value.trim();
-        if (description === "") {
-            descriptionError.textContent = "Description cannot be empty";
-            descriptionError.style.display = "flex";
-            return false;
-        } else if (description.length < 10) {
-            descriptionError.textContent = "Description must be at least 10 characters long";
-            descriptionError.style.display = "flex";
-            return false;
-        }
-        descriptionError.textContent = "";
-        descriptionError.style.display = "none";
+    if (desc.trim() === "") {
+        alert("Description cannot be empty");
+        return false;
+    }
+
+    else if (desc.trim().length < 10) {
+        alert("Description must be at least 10 characters long");
+        return false;
+    }
+
+    else {
         return true;
     }
+}
 
-    function validateTags() {
-        if (!tagsInput) return false;
-        if (tagsInput.selectedIndex == 0 || tagsInput.selectedIndex == 1) {
-            tagsError.textContent = "Please select a valid tag.";
-            tagsError.style.display = "flex";
-            return false;
-        }
-        tagsError.textContent = "";
-        tagsError.style.display = "none";
+function validateTags(tagsInput) {
+    let tag = tagsInput.value;
+
+    if (tag === "") {
+        alert("Please select a valid tag.");
+        return false;
+    }
+
+    else {
         return true;
     }
+}
 
-    function validateAIRadio() {
-        const isChecked = [...aiRadioButtons].some(radio => radio.checked);
-        if (!isChecked) {
-            aiError.textContent = "Please select an option.";
-            aiError.style.display = "flex";
-            return false;
+function validateFile(fileInput) {
+    let file = fileInput.files[0];
+    let fileNameDisplay = document.getElementById("file-name");
+    let fileThumbnail = document.getElementById("file-thumbnail");
+
+    if (!file) {
+        alert("You must upload an image.");
+        return false;
+    }
+
+    else if (!file.type.startsWith("image/")) {
+        alert("Only image files are supported.");
+        return false;
+    }
+
+    else {
+        fileNameDisplay.textContent = file.name;
+
+        let reader = new FileReader();
+        reader.onload = function(e) {
+            fileThumbnail.src = e.target.result;
+            fileThumbnail.hidden = false;
         }
-        aiError.textContent = "";
-        aiError.style.display = "none";
+        reader.readAsDataURL(file);
+
         return true;
     }
-    
-    let lastChecked = null;
-    aiRadioButtons.forEach(radio => {
-        radio.addEventListener("click", function () {
-            if (lastChecked === this) {
-                this.checked = false;
-                lastChecked = null;
-            } else {
-                lastChecked = this;
-            }
-            validateAIRadio();
-            validateFinalForm();
-        });
-    });
+}
 
-    function validateFinalForm() {
-        const isValid =
-            validateEmail() &&
-            validateTitle() &&
-            validateDescription() &&
-            validateTags() &&
-            validateAIRadio();
-
-        if (isValid) {
-            submitButton.style.pointerEvents = "auto";
-            submitButton.style.opacity = "1";
-        } else {
-            submitButton.style.pointerEvents = "none";
-            submitButton.style.opacity = "0.5";
-        }
+function validateAIRadio(yes, no) {
+    if (!yes.checked && !no.checked) {
+        alert("Please select an option for AI generated content.");
+        return false;
     }
 
-    function clearForm() {
-        fileInput.value = "";
-        emailInput.value = "";
-        titleInput.value = "";
-        descriptionInput.value = "";
-        tagsInput.value = "";
-        aiRadioButtons.forEach(radio => (radio.checked = false));
-
-        fileNameDisplay.textContent = "No file chosen";
-        fileThumbnail.hidden = true;
-
-        [fileError, emailError, titleError, descriptionError, tagsError, aiError].forEach(error => {
-            error.textContent = "";
-            error.style.display = "none";
-        });
-
-        validateFinalForm();
+    else {
+        return true;
     }
-    
-    if (emailInput) emailInput.addEventListener("input", () => { validateEmail(); validateFinalForm(); });
-    if (titleInput) titleInput.addEventListener("input", () => { validateTitle(); validateFinalForm(); });
-    if (descriptionInput) descriptionInput.addEventListener("input", () => { validateDescription(); validateFinalForm(); });
-    if (tagsInput) tagsInput.addEventListener("change", () => { validateTags(); validateFinalForm(); });
-    if (aiRadioButtons.length > 0) aiRadioButtons.forEach(radio => 
-        radio.addEventListener("click", () => { validateAIRadio(); validateFinalForm(); })
-    );
-
-    if (submitButton) {
-        submitButton.addEventListener("click", function () {
-            validateFinalForm();
-            if (submitButton.style.pointerEvents === "auto") {
-                alert("Submission successful!"); // Simulated success message
-                clearForm();
-            } else {
-                alert("Please correct all errors before submitting.");
-            }
-        });
-    }
-
-    validateFinalForm();
-    
-
-});
+}
