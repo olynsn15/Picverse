@@ -233,7 +233,7 @@
 
     .key-features-container{
         flex-direction: column;
-        max-width: 70%;
+        max-width: 85%;
     }
 
     .key-features-container p{
@@ -271,14 +271,7 @@
     }
 
     .responsive-pfp{
-        padding: 1rem 2rem;
-    }
-
-    .responsive-pfp img{
-        aspect-ratio: 1/1;
-        height: 40px;
-        object-fit: cover;
-        border-radius: 50px;
+        display: none;
     }
 
     .community{
@@ -306,6 +299,10 @@
 
     #profile-divider{
         display: none;
+    }
+
+    .post-forum-input {
+        font-size: 0.65em;
     }
 
     .profile > .buttons{
@@ -425,7 +422,7 @@
 
     .responsive-footer-cpy p{
         color: white;
-        font-size: 1em;
+        font-size: 0.75em;
     }
 
     .footer-responsive{
@@ -564,6 +561,13 @@
     /* ABOUT US */
     .about-picverse-text > .buttons {
         font-size: 1.15em;
+    }
+
+    /* COMMUNITY */
+    .forum-header {
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
     }
 
     /* SUBMISSION */
