@@ -172,6 +172,10 @@ textarea{
     padding: 0rem 1rem;
 }
 
+.input-container input[type="radio"]{
+    accent-color: #30645F;
+}
+
 .radio-input {
     width: 18px;
     height: 18px;
