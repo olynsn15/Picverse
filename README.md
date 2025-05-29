@@ -15,8 +15,8 @@ Picverse is a community platform that allows digital artists to share their work
 - Artwork Images from National Gallery of Art Open Access https://www.nga.gov/artworks/free-images-and-open-access
 
 ## GITHUB PAGES & FIGMA :
-[Github Pages Link](https://olynsn15.github.io/Picverse/)
-[Figma Prototype Link](https://www.figma.com/design/gg7SKdVJP04Kd1lT2oTyYU/HCI-LAB-PROJECT-WEB?node-id=0-1&p=f&t=bOVGqTbsTUTPARgA-0)
+- [Github Pages Link](https://olynsn15.github.io/Picverse/)
+- [Figma Prototype Link](https://www.figma.com/design/gg7SKdVJP04Kd1lT2oTyYU/HCI-LAB-PROJECT-WEB?node-id=0-1&p=f&t=bOVGqTbsTUTPARgA-0)
 
 ## TECH STACK :
 ![Figma](https://img.shields.io/badge/Figma-F24E1E?logo=figma&logoColor=white)
