@@ -1,0 +1,39 @@
+PICVERSE
+Picverse is an accessible community platform where digital artists can share their creations, 
+engage with other members, and gain recognition. It aims to connect artists and art lovers globally 
+by providing an enjoyable user experience.
+
+5 MAIN FEATURES : 
+- Home
+- Gallery
+- About Us 
+- Community
+- Submission
+
+REFERENCES : 
+Fonts : 
+Space Grotesk from Google Fonts
+https://fonts.google.com/specimen/Space+Grotesk?preview.layout=grid 
+
+Lexend Deca from Google Fonts
+https://fonts.google.com/specimen/Lexend+Deca?preview.layout=grid 
+
+
+Artwork images : 
+National Gallery of Art Open Access 
+https://www.nga.gov/artworks/free-images-and-open-access 
+
+IDEELART
+https://ideelart.com/blogs/magazine/the-most-important-abstract-artists-of-the-21st-century-so-far 
+
+
+Icons :
+Figma Material 3 Design Kit
+
+Flaticon
+https://www.flaticon.com/ 
+
+
+Profile pictures :
+Pinterest
+https://id.pinterest.com/ 
