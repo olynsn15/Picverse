@@ -140,7 +140,7 @@ Picverse/
 ```
 <br>
 
-## 📌 Notes
+## Notes
 ```
 - Project designed for the **HCI Lab Web Project**  
 
