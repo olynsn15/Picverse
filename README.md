@@ -141,14 +141,12 @@ Picverse/
 <br>
 
 ## Notes
-```
-- Project designed for the **HCI Lab Web Project**  
-
+``` 
 - Assets Used
 Fonts : Lexend Deca and Space Grotesk (via Google Fonts (https://fonts.google.com))  
 Icons : Flaticon & Figma Material Design Pack  
 Images : Pinterest and National Gallery of Art Open Access (https://www.nga.gov/artworks/free-images-and-open-access)
 
-Created by me - Carolyn Santana
+Picverse is a semester-long final individual project developed for Human Computer Interaction LAB course
 ```
 <br><br>
